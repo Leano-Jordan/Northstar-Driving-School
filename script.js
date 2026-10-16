@@ -61,13 +61,13 @@
 
   const chat = document.createElement("a");
   chat.className = "floating-whatsapp";
-  chat.href = "https://wa.me/27715752579?text=Hi%20Thabz%2C%20I%27d%20like%20to%20enquire%20about%20driving%20options.";
-  chat.setAttribute("aria-label", "Message Thabz Driving School on WhatsApp");
+  chat.href = "contact.html#demo-enquiry";
+  chat.setAttribute("aria-label", "View demo contact details");
   const chatDot = document.createElement("span");
   chatDot.className = "chat-dot";
   chatDot.setAttribute("aria-hidden", "true");
   const chatText = document.createElement("span");
-  chatText.textContent = "Message Thabz";
+  chatText.textContent = "Demo contact";
   const chatArrow = document.createElement("span");
   chatArrow.textContent = "↗";
   chatArrow.setAttribute("aria-hidden", "true");
