@@ -299,7 +299,17 @@ check("has-mobile-menu" in js and ".site-header:not(.has-mobile-menu) nav" in cs
 check('targetId === "#main-content"' in js and "target.focus({ preventScroll: true })" in js,
       "Skip navigation does not programmatically focus main content")
 check("floatingSuppressed = floatingVisibleTargets.size > 0" in js,
-      "Floating WhatsApp CTA can obscure the contact area or footer")
+      "Floating demo-contact CTA can obscure the contact area or footer")
+
+check("floating-demo-contact" in js and ".floating-demo-contact" in css,
+      "Floating demo-contact CTA naming is inconsistent between JavaScript and CSS")
+combined_html = "\\n".join(sources[page] for page in PAGES)
+check("WHATSAPP_CLICK" not in combined_html and "PHONE_CLICK" not in combined_html,
+      "Demo-only contact links still claim to trigger live WhatsApp/phone actions")
+check("MESSAGE ON WHATSAPP" not in combined_html and "Send a WhatsApp enquiry" not in combined_html,
+      "Demo-only contact UI still promises a live WhatsApp channel")
+check("YOUR ROADMAP" in sources["index.html"] and "class=\"route-peek-icon\"" in sources["index.html"],
+      "Homepage hero route card is missing its new visual treatment")
 check('fetchpriority="high"' in index and "srcset=" in index and "sizes=" in index,
       "Hero image is missing priority/responsive source attributes")
 check("images.pexels.com" in index and "Pexels" in readme,
