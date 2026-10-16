@@ -181,6 +181,13 @@ for page in PAGES:
     for image in audit.images:
         check(bool(image.get("alt", "").strip()) or image.get("src", "").startswith("assets/icons/"),
               f"{page}: image missing meaningful alt text or documented decorative-icon handling")
+        check(image.get("width", "").isdigit() and image.get("height", "").isdigit(),
+              f"{page}: image needs explicit width and height to reduce layout shift")
+        check(image.get("decoding") == "async",
+              f"{page}: image should use asynchronous decoding")
+        if image.get("fetchpriority") != "high":
+            check(image.get("loading") == "lazy",
+                  f"{page}: below-the-fold image should use lazy loading unless explicitly prioritised")
     for script_text in audit.json_scripts:
         try:
             json.loads(script_text)
