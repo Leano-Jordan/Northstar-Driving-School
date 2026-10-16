@@ -23,7 +23,7 @@ Understand training options → compare approved rates and packages where publis
 
 ## Pricing is configurable
 - The current sample homepage deliberately displays clearly disclosed illustrative rates using data-pricing-mode="published", to show buyers the intended design. They are not approved rates for a real school.
-- Before launch, replace every sample amount with owner-approved prices or switch data-pricing-mode="quote" to hide the examples. The JavaScript also supports "mixed" mode. An amount is shown only when its pricing mode permits it and a data-price-amount value exists.
+- Before launch, replace sample rates with owner-approved prices. Each price row declares data-price-mode="published" or "quote": page mode "published" shows fixed rates, "quote" hides fixed rates but keeps tailored-quote labels, and "mixed" shows both. An empty amount is always hidden.
 - The template offers single-lesson, lesson-package and tailored-training examples; remove anything the actual school does not provide.
 - For published rates, show lesson duration, inclusions, package terms/cancellation rules and separate licensing/test charges where relevant.
 - Quote-first pricing is appropriate for custom or specialist training, but is not a universal restriction. A mixed model is also supported.
