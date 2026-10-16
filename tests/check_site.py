@@ -9,7 +9,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = ("index.html", "services.html", "contact.html", "404.html")
-REQUIRED_FILES = (*PAGES, "styles.css", "script.js", "README.md", "favicon.svg")
+REQUIRED_FILES = (*PAGES, "styles.css", "homepage-refinements.css", "script.js", "README.md", "favicon.svg")
 errors = []
 
 
@@ -126,6 +126,7 @@ def read_file(relative_path):
 
 sources = {path: read_file(path) for path in REQUIRED_FILES}
 sources["README.md"] = read_file("README.md")
+sources["homepage-refinements.css"] = read_file("homepage-refinements.css")
 sources["AGENTS.md"] = read_file("AGENTS.md")
 sources["docs/QUALITY-GATES.md"] = read_file("docs/QUALITY-GATES.md")
 sources[".github/workflows/site-quality.yml"] = read_file(".github/workflows/site-quality.yml")
