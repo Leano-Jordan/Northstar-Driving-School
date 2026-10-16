@@ -33,7 +33,7 @@
     const percentage = scrollable > 0 ? Math.min(1, Math.max(0, scrollTop / scrollable)) : 0;
     progress.style.transform = "scaleX(" + percentage + ")";
     if (header) header.classList.toggle("is-scrolled", scrollTop > 12);
-    const floating = document.querySelector(".floating-whatsapp");
+    const floating = document.querySelector(".floating-demo-contact");
     if (floating) floating.classList.toggle("is-visible", scrollTop > 240 && !floatingSuppressed);
   }
   let scrollFrame = 0;
@@ -80,7 +80,7 @@
   }
 
   const chat = document.createElement("a");
-  chat.className = "floating-whatsapp";
+  chat.className = "floating-demo-contact";
   chat.href = "contact.html#demo-enquiry";
   chat.setAttribute("aria-label", "View demo contact details");
   const chatDot = document.createElement("span");
@@ -92,7 +92,7 @@
   chatArrow.textContent = "↗";
   chatArrow.setAttribute("aria-hidden", "true");
   chat.append(chatDot, chatText, chatArrow);
-  chat.dataset.event = "WHATSAPP_CLICK";
+  chat.dataset.event = "DEMO_CONTACT_CLICK";
   document.body.appendChild(chat);
 
   // Avoid covering the page's main enquiry action or footer links.
