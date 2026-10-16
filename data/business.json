@@ -1,10 +1,11 @@
 {
-  "name": "Thabz Driving School",
-  "phone": "071 575 2579",
-  "phoneTel": "+27715752579",
-  "whatsappUrl": "https://wa.me/27715752579",
-  "marketContext": "Centurion search query; confirm exact service area with owner",
-  "priceDisclosure": "Prices, package amounts and internal budget details are intentionally excluded from this public repository.",
+  "name": "Northstar Driving Academy",
+  "isDemo": true,
+  "phone": "",
+  "phoneTel": "",
+  "whatsappUrl": "",
+  "marketContext": "South Africa demo; buyer must confirm exact service area",
+  "priceDisclosure": "Demo template contains no published prices. Populate only with buyer-approved details.",
   "claimsRequiringVerification": [
     "current prices and package inclusions",
     "exact service area and address",
