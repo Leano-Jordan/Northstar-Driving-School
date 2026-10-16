@@ -4,7 +4,7 @@
   "phone": "",
   "phoneTel": "",
   "whatsappUrl": "",
-  "marketContext": "South Africa demo; buyer must confirm exact service area",
+  "marketContext": "South Africa is the default demo market; the buyer must confirm its exact service area and jurisdiction.",
   "priceDisclosure": "Demo template contains no published prices. Populate only with buyer-approved details.",
   "claimsRequiringVerification": [
     "current prices and package inclusions",
@@ -16,5 +16,13 @@
     "test-booking support",
     "reviews, pass rates and guarantees",
     "current application and testing-centre fees"
+  ],
+  "localizationChecklist": [
+    "language and locale metadata",
+    "local licence categories, eligibility and jurisdiction-specific terminology",
+    "service area, country code, currency and preferred enquiry channel",
+    "privacy notice, terms and locally appropriate legal disclosures",
+    "structured business data that matches verified buyer details",
+    "buyer-owned photography and confirmed claims"
   ]
 }
