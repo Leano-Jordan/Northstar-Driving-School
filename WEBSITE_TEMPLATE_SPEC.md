@@ -1,56 +1,51 @@
 # Northstar Driving Academy — Reusable Website Template Spec
 
 ## Objective
-A strong homepage-led prospect demo that helps the owner react to a clear design, messaging and enquiry experience before a full project scope is agreed.
+A premium, photo-led driving-school website template for independent instructors, local schools and international buyers. Northstar is fictional demo branding, not a live business.
 
 ## Visitor journey
-Understand the training options → scan listed packages → view demo contact information.
+Understand training options → compare rates and packages where published → review FAQs → reach a clear enquiry or booking channel.
 
 ## Visual direction
-- Editorial driving-school photography, a distinctive oversized display type scale and a confident, spacious layout.
-- Bright premium palette: confident cobalt `#2458D3`, deep navy `#152A4A`, sunshine yellow `#FFD166`, clean white `#FFFFFF`, soft sky blue `#EAF2FF`, cool ink `#17243A` and a small coral accent `#C83B2A`.
-- Cobalt reinforces clarity and dependability; sunshine yellow adds optimistic energy; white and sky-blue surfaces keep the experience open, fresh and readable. Coral is used sparingly for small moments of emphasis rather than competing with the primary call to action.
-- Responsive card depth, carefully staggered reveals, small hover transitions and a moving route motif provide personality without distracting from enquiries.
-- Google Fonts are loaded with system fallbacks and `display=swap`; the site must remain usable if the font request fails. No paid font or icon service is required.
-- No fabricated reviews, scores, badges or claims.
-- Public website must not display unverified service prices; visitors use the buyer-approved enquiry channel to request a quote.
+- Bright premium palette: cobalt #2458D3, deep navy #152A4A, sunshine #FFD166, white #FFFFFF, sky blue #EAF2FF and ink #17243A.
+- Editorial typography, deliberate whitespace, image-led storytelling, careful image crops, restrained motion and a clear primary action.
+- Use a relevant road photograph as subtle section-background texture beneath a strong navy overlay.
+- Keep outline SVG icons bundled in assets/icons; do not load a paid icon pack or external icon CDN.
+- No invented trust claims, testimonials, prices, credentials or business details.
+- Do not use a full-width demo/warning banner; keep fictional-demo status discreet in the footer.
 
 ## Scope
-- Homepage, training-options page, contact page and 404 page.
-- Static HTML/CSS/JS; no booking backend, payments or database.
-- Demo enquiry links route to the contact section. Configure tap-to-call and WhatsApp only after the buyer confirms their contact destinations.
-- Mobile-first layout, keyboard focus, responsive images and reduced-motion support, including live preference changes in JavaScript.
-- Buyer-market localization checklist: language/locale metadata, driving category terminology, currency, service area, country code, enquiry channel, privacy/terms and locally valid schema content.
+- Home page, training-options page, contact preview and 404 page.
+- Static HTML/CSS/vanilla JavaScript; no booking backend, payment flow or database.
+- Demo enquiry actions lead to a contact preview. Connect buyer-owned phone, WhatsApp, email or booking destinations only after confirmation.
+- Mobile-first layout, accessible focus, responsive image markup, lazy-loaded secondary photography and reduced-motion support.
+- SEO metadata and structured business data use verified content only.
 
-## Public business information
-- No real phone or WhatsApp details are included in the demo.
-- Public site and repository documentation must not contain package prices or internal budget figures.
-- Current prices, inclusions and fee details are discussed privately with the owner and are not stored in this public repository.
+## Pricing is configurable
+- The demo starts in quote mode via data-pricing-mode="quote" on the homepage; no price amounts are invented.
+- To publish rates, change this to data-pricing-mode="published" and enter owner-approved amounts in the matching data-price-amount fields in index.html. A price appears only when published mode is on and an amount exists.
+- The template offers single-lesson, lesson-package and tailored-training examples; remove anything the actual school does not provide.
+- For published rates, show lesson duration, inclusions, package terms/cancellation rules and separate licensing/test charges where relevant.
+- Quote-first pricing is appropriate for custom or specialist training, but is not a universal restriction. A mixed model is also supported.
+- Never put private internal budgets or confidential notes in the public repository. Only approved customer-facing prices should be published.
 
-## Image policy
-The homepage uses licensed illustrative stock photography. Replace it with buyer-approved photography where available, and never imply stock imagery depicts the buyer's real instructor, learners or fleet.
+## Photography and icon licensing
+- Use relevant photography in the hero, training cards, a story/gallery section and inner-page hero/contact panel.
+- Illustrative photos are sourced from Pexels: https://www.pexels.com/license/. Photo source links are listed in README.md.
+- Stock imagery does not depict the buyer’s actual instructor, learners, location or fleet. Replace with owner-approved images where possible.
+- Local SVG outline icons follow the open-source Lucide icon family under ISC; see assets/icons/README.md and https://github.com/lucide-icons/lucide/blob/main/LICENSE.
 
-## Do not fabricate
-Address, service coverage, hours, transmission type, pick-up/drop-off, instructors, qualifications, accreditation, reviews, pass rates, guarantees or exact package inclusions.
+## Terminology and localization
+- Lead with globally understandable categories: learner licence/permit, theory support, practical lessons, licence test preparation, refresher lessons and specialist training.
+- South African examples such as learner’s licence, Code 8/10/14 and PDP/PrDP are regional search vocabulary, not universal categories.
+- Verify the jurisdiction’s current licence terminology, eligibility, currency, service area, country code, locale, enquiry channel, privacy terms and structured business data before launch.
+- Never invent availability, transmission types, pick-up/drop-off, test support, credentials, address, price or guarantees.
 
-## Demo acceptance checks
-- No plumbing copy, legacy brown/green theme remnants or former-client identity/contact remnants.
-- All demo enquiry actions point to the demo contact section. No live phone or WhatsApp destinations are configured.
-- No package prices or internal budget figures are present in public pages, data files or documentation.
-- Navigation targets exist; supporting pages use matching visual tokens.
-- Readable on narrow mobile screens and wide desktop screens.
-- No unsupported trust claims.
-- Confirm public GitHub Pages deployment before sharing a live link.
+## Quality gates
+Run from the repository root: python3 tests/check_site.py
+Static checks cover HTML metadata, links, image alt text, responsive markup, icon assets, optional pricing, accessibility basics and reduced motion. They do not replace a browser audit or Lighthouse.
 
-## Production gate
-Owner feedback, current details, approved imagery, final scope and budget must be agreed before production launch.
-
-
-## Visual system update — bright premium road-trip palette
-- Primary: cobalt blue `#2458D3` for links and primary calls to action.
-- Structure: deep navy `#152A4A` for navigation and high-contrast sections.
-- Accent: sunshine yellow `#FFD166` for highlights, secondary CTA surfaces and route markers.
-- Canvas: clean white `#FFFFFF`; supporting surface: sky blue `#EAF2FF`.
-- Body text: `#17243A`; muted text: `#53627A`; borders: `#DCE6F3`; secondary accent: coral `#C83B2A`.
-- Rationale: blue signals clarity and dependability; yellow brings energy and friendliness. Use accents with restraint to keep the result premium rather than childish.
-- Accessibility target: WCAG AA text contrast (4.5:1 for ordinary text; 3:1 for large text).
+## Release and deployment
+- Work directly on the single main branch; no feature branches or pull requests for routine iterations.
+- Confirm GitHub Actions, inspect the published URL and test mobile/desktop layouts before calling it ready.
+- Production requires approval of brand, photography, services, pricing model, contact destinations, legal copy and domain ownership.
