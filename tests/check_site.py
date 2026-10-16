@@ -156,7 +156,7 @@ for page in PAGES:
     check(bool(audit.metas.get("viewport")), f"{page}: missing viewport metadata")
     check(bool(audit.metas.get("description")), f"{page}: missing meta description")
     if page in ("index.html", "services.html", "contact.html"):
-        canonical = re.search(r'<link\\s+rel="canonical"\\s+href="([^"]+)"', source, re.I)
+        canonical = re.search(r'<link\s+rel="canonical"\s+href="([^"]+)"', source, re.I)
         check(canonical is not None, f"{page}: missing canonical URL")
         check(bool(audit.metas.get("og:url")), f"{page}: missing Open Graph URL")
     check(bool(audit.metas.get("theme-color")), f"{page}: missing theme-color metadata")
