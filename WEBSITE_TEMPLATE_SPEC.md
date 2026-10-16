@@ -22,7 +22,7 @@ Understand training options → compare approved rates and packages where publis
 - SEO metadata and structured business data use verified content only.
 
 ## Pricing is configurable
-- The current sample homepage deliberately displays clearly disclosed illustrative rates using data-pricing-mode="published", to show buyers the intended design. They are not approved rates for a real school.
+- The current sample homepage deliberately uses data-pricing-mode="mixed" to show both clearly disclosed illustrative rates and a tailored-quote option. They are not approved rates for a real school.
 - Before launch, replace sample rates with owner-approved prices. Each price row declares data-price-mode="published" or "quote": page mode "published" shows fixed rates, "quote" hides fixed rates but keeps tailored-quote labels, and "mixed" shows both. An empty amount is always hidden.
 - The template offers single-lesson, lesson-package and tailored-training examples; remove anything the actual school does not provide.
 - For published rates, show lesson duration, inclusions, package terms/cancellation rules and separate licensing/test charges where relevant.
