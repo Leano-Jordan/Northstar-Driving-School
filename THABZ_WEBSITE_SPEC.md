@@ -7,9 +7,11 @@ A strong homepage-led prospect demo that helps the owner react to a clear design
 Understand the training options → scan listed packages → view demo contact information.
 
 ## Visual direction
-- Driving-school photography and a natural editorial layout instead of abstract roads, car-sale imagery or insurance-style blocks.
-- South African flag-inspired accents used with restraint: deep green structure, green links, gold CTA, and small red/blue/black details.
-- White and soft-sage sections, clear type hierarchy, small cards and deliberate spacing.
+- Editorial driving-school photography, a distinctive oversized display type scale and a confident, spacious layout.
+- Autumn palette: espresso `#38251D`, burnt terracotta `#B94F2D`, warm amber `#E8B85C`, warm cream `#FBF6EF`, sand `#F1E5D7` and ink `#2B2521`.
+- Warm neutrals support trust and readability; terracotta gives calls to action clear visual energy; amber is an accent, not the sole carrier of meaning.
+- Responsive card depth, carefully staggered reveals, small hover transitions and a moving route motif provide personality without distracting from enquiries.
+- Google Fonts are loaded with system fallbacks and `display=swap`; the site must remain usable if the font request fails. No paid font or icon service is required.
 - No fabricated reviews, scores, badges or claims.
 - Public website must not display service prices; visitors request quotes privately by WhatsApp or social DM.
 
@@ -17,8 +19,8 @@ Understand the training options → scan listed packages → view demo contact i
 - Homepage, training-options page, contact page and 404 page.
 - Static HTML/CSS/JS; no booking backend, payments or database.
 - Tap-to-call and WhatsApp enquiry links.
-- Mobile-first layout, keyboard focus and reduced-motion support.
-- No third-party fonts or paid assets.
+- Mobile-first layout, keyboard focus, responsive images and reduced-motion support, including live preference changes in JavaScript.
+- Buyer-market localization checklist: language/locale metadata, driving category terminology, currency, service area, country code, enquiry channel, privacy/terms and locally valid schema content.
 
 ## Public business information
 - No real phone or WhatsApp details are included in the demo.
@@ -32,7 +34,7 @@ The homepage uses licensed illustrative stock photography. Replace it with buyer
 Address, service coverage, hours, transmission type, pick-up/drop-off, instructors, qualifications, accreditation, reviews, pass rates, guarantees or exact package inclusions.
 
 ## Demo acceptance checks
-- No plumbing copy or visual remnants.
+- No plumbing copy, green/sage theme remnants or former-client identity/contact remnants.
 - All demo enquiry actions point to the demo contact section. No live phone or WhatsApp destinations are configured.
 - No package prices or internal budget figures are present in public pages, data files or documentation.
 - Navigation targets exist; supporting pages use matching visual tokens.
