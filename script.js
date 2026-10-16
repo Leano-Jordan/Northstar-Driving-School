@@ -12,6 +12,13 @@
     });
   }
 
+  // Pricing is optional: show buyer-entered amounts only in explicit published mode.
+  const pricingMode = document.body && document.body.dataset.pricingMode === "published" ? "published" : "quote";
+  document.querySelectorAll("[data-package-price]").forEach((price) => {
+    const amount = price.querySelector("[data-price-amount]");
+    price.hidden = pricingMode !== "published" || !amount || !amount.textContent.trim();
+  });
+
   // Keep the copyright notice correct without requiring an annual content edit.
   document.querySelectorAll("[data-current-year]").forEach((element) => {
     element.textContent = String(new Date().getFullYear());
@@ -82,12 +89,12 @@
   const chat = document.createElement("a");
   chat.className = "floating-demo-contact";
   chat.href = "contact.html#demo-enquiry";
-  chat.setAttribute("aria-label", "View demo contact details");
+  chat.setAttribute("aria-label", "Start an enquiry");
   const chatDot = document.createElement("span");
   chatDot.className = "chat-dot";
   chatDot.setAttribute("aria-hidden", "true");
   const chatText = document.createElement("span");
-  chatText.textContent = "Demo contact";
+  chatText.textContent = "Enquire now";
   const chatArrow = document.createElement("span");
   chatArrow.textContent = "↗";
   chatArrow.setAttribute("aria-hidden", "true");
