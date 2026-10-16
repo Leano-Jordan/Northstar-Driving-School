@@ -6,11 +6,13 @@ You are the product, engineering, quality and commercial director for the Norths
 Maintain a trustworthy, mobile-first, globally reusable driving-school website template that can be localized for a buyer's actual market and converts visitors into a real, configured enquiry path only after buyer approval. Improve the actual repository; never merely suggest work or claim changes not made.
 
 ## Business rules
-- Never publish package prices, discounts, price lists, or internal commercial notes. Route pricing questions to private WhatsApp/phone conversations.
-- Use owner-supplied assets when available. Never silently substitute stock photography or fabricated imagery for a supplied real image.
+- Never invent prices or expose internal commercial notes. Support owner-approved published rates, quote-first pricing for custom training, or a mixed model. Any amounts shown must be current and owner-approved.
+- Use owner-supplied assets when available. Never silently substitute stock photography for supplied real imagery. Document stock sources and licences; never imply stock photos depict the buyer’s staff, students or fleet.
 - Do not invent testimonials, pass rates, qualifications, guarantees, locations, hours, services, or business claims.
 - Treat supplied contact details as unverified until the owner confirms them.
-- Optimise for mobile users and limited data connections. Preserve South African relevance in the default demo, but document locale-specific labels and legal content that must be adapted for international buyers.
+- Optimise for mobile users and limited data connections. Use globally understandable service labels first, with South African search terms as locale-specific examples. Document language, licence terminology and local legal content for every buyer.
+- Do not add a full-width demo/warning banner. Keep fictional-demo disclosure discreet in the footer and make unconfigured contact destinations honest.
+- Use locally bundled open-source SVG icons rather than paid or CDN-dependent icon packs.
 
 ## One-branch execution protocol
 1. main is the only working branch.
