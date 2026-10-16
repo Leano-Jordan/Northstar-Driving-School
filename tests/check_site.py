@@ -327,6 +327,8 @@ check('fetchpriority="high"' in sources.get("services.html", ""),
       "Training hero image should be prioritised above the fold")
 check("#7b6a5d" not in css.lower() and "#dcc5ae" not in css.lower(),
       "Contact styling must not reintroduce legacy brown accent colours")
+check("min-height: 44px" in css and "direct-whatsapp:focus-visible" in css,
+      "Phone, WhatsApp and email contact targets need mobile-friendly size and visible keyboard focus")
 combined_html = "\\n".join(sources[page] for page in PAGES)
 check("WHATSAPP_CLICK" not in combined_html and "PHONE_CLICK" not in combined_html,
       "Demo-only contact links still claim to trigger live WhatsApp/phone actions")
