@@ -620,3 +620,7 @@ main[tabindex="-1"]:focus-visible { outline: 3px solid var(--coral); outline-off
   .footer-identity, .footer-connect { grid-column: auto; }
 }
 @media (prefers-reduced-motion: reduce) { .header-call, .footer-column > a, .footer-contact-link { transition: none !important; } }
+
+
+/* Reusable sales-demo notice */
+.demo-banner{position:relative;z-index:20;padding:9px 16px;background:#f2ead7;color:#3d3526;text-align:center;font:700 .72rem/1.4 "DM Sans",sans-serif;letter-spacing:.09em;text-transform:uppercase;border-bottom:1px solid rgba(61,53,38,.16)}
