@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Dependency-free multi-page static quality checks for the Thabz site."""
+"""Dependency-free multi-page static quality checks for the Northstar reusable template."""
 from html.parser import HTMLParser
 from pathlib import Path
 import json
@@ -220,12 +220,20 @@ check("data-current-year" in index and "new Date().getFullYear()" in js,
 check("tel:" in index or "contact.html#demo-enquiry" in index, "Homepage missing contact conversion link")
 check("prefers-reduced-motion" in css, "Reduced-motion fallback missing")
 check("#d8f66a" not in css.lower() and "#d8f66a" not in sources.get("favicon.svg", "").lower(),
-      "Legacy neon-lime accent remains outside the harmonised sage palette")
+      "Legacy neon-lime accent remains in the autumn palette")
 check(":focus-visible" in css, "Visible keyboard focus missing")
 check(re.search(r"@media\s*\([^)]*max-width", css) is not None,
       "No narrow-screen breakpoint")
 check("innerHTML" not in js, "Review potentially unsafe innerHTML usage")
 check("IntersectionObserver" in js, "Scroll reveal does not use IntersectionObserver")
+check("requestAnimationFrame" in js and "scheduleScrollUI" in js,
+      "Scroll UI updates should be scheduled per animation frame")
+check("motionQuery.addEventListener" in js,
+      "Reduced-motion preference changes should update JavaScript behaviour")
+check("--espresso:" in css and "--terracotta:" in css and "--amber:" in css,
+      "Semantic autumn colour tokens are missing")
+check("#f7f8f4" not in css.lower() and "#778278" not in css.lower(),
+      "Cool green/sage colour remnants remain in the autumn theme")
 check("aria-expanded" in js and "aria-expanded" in index,
       "Mobile navigation is missing an accessible expanded state")
 check("has-mobile-menu" in js and ".site-header:not(.has-mobile-menu) nav" in css,
@@ -246,7 +254,7 @@ workflow = sources.get(".github/workflows/site-quality.yml", "")
 check('branches: ["main"]' in workflow and "pull_request:" not in workflow,
       "Site quality workflow should run on main only")
 
-print("Thabz multi-page static quality checks")
+print("Northstar reusable-template multi-page static quality checks")
 print(f"Pages audited: {len(audits)}")
 print(f"Errors: {len(errors)}")
 for error in errors:
