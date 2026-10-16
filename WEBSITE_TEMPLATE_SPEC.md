@@ -13,12 +13,12 @@ Understand the training options → scan listed packages → view demo contact i
 - Responsive card depth, carefully staggered reveals, small hover transitions and a moving route motif provide personality without distracting from enquiries.
 - Google Fonts are loaded with system fallbacks and `display=swap`; the site must remain usable if the font request fails. No paid font or icon service is required.
 - No fabricated reviews, scores, badges or claims.
-- Public website must not display service prices; visitors request quotes privately by WhatsApp or social DM.
+- Public website must not display unverified service prices; visitors use the buyer-approved enquiry channel to request a quote.
 
 ## Scope
 - Homepage, training-options page, contact page and 404 page.
 - Static HTML/CSS/JS; no booking backend, payments or database.
-- Tap-to-call and WhatsApp enquiry links.
+- Demo enquiry links route to the contact section. Configure tap-to-call and WhatsApp only after the buyer confirms their contact destinations.
 - Mobile-first layout, keyboard focus, responsive images and reduced-motion support, including live preference changes in JavaScript.
 - Buyer-market localization checklist: language/locale metadata, driving category terminology, currency, service area, country code, enquiry channel, privacy/terms and locally valid schema content.
 
