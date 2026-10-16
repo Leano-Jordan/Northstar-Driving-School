@@ -1,6 +1,6 @@
 # Northstar Driving Academy — reusable website template
 
-A mobile-first static website for Northstar Driving Academy, designed around a distinctive editorial identity, clear training pathways and direct WhatsApp enquiries.
+A mobile-first static website template for driving schools, demonstrated with the fictional Northstar Driving Academy identity. It pairs an editorial autumn visual system with clear training pathways and a conversion-focused demo enquiry journey.
 
 ## Customer journey
 - Start with a clear brand statement and an illustrative driving lesson photo.
@@ -29,21 +29,29 @@ A mobile-first static website for Northstar Driving Academy, designed around a d
 - Pages: `index.html`, `services.html`, `contact.html`, and `404.html`.
 - Static HTML, CSS and vanilla JavaScript; no booking backend, database or framework.
 - Responsive layouts, accessible mobile navigation, skip link, visible focus styles, native accessible FAQ disclosures and reduced-motion support.
-- Motion includes a continuous editorial ticker, scroll reveals, subtle hover feedback, a route motif and scroll progress.
+- Motion includes a continuous editorial ticker, scroll reveals, subtle hover feedback, a gently moving route motif and scroll progress. Reduced-motion preferences are respected in CSS and JavaScript, including preference changes while the page is open.
 - Demo conversion path: contact-section anchor. No live messaging or calling destination is configured.
 - SEO metadata and basic structured business data are included. No unverified address, reviews, pass rates, opening hours, instructor credentials or service guarantees are invented.
 
+## Local and international reuse
+
+- The visual system, page structure and neutral enquiry journey can be adapted to local independent instructors, multi-vehicle schools or larger training providers.
+- This demo is South African by default. “Code 8”, “Code 10”, “Code 14”, “PDP”, “learner's licence”, en-ZA language metadata and South Africa references are jurisdiction-specific, not international legal advice.
+- For another market, replace licence terminology and eligibility guidance with the relevant local rules; then update spelling, language/locale metadata, currency, service-area wording, phone country code, messaging channel, privacy/terms requirements and schema markup.
+- Translate copy rather than relying on flags or colour alone to signal locale. Keep the demo label until all fictional identity, destination and legal-content placeholders are replaced and verified.
+
 ## Development workflow
 - The single working branch is `main`. All site work and commits happen directly on `main`; do not create working branches or pull requests.
-- Run `python3 tests/check_site.py` before committing site changes.
+- Run `python3 tests/check_site.py` before committing site changes. The repository quality workflow also runs on pushes to `main`.
 - Detailed working rules are in `AGENTS.md`; quality-gate details are in `docs/QUALITY-GATES.md`.
 
 ## Before launch
-1. Test the published site on a real phone and in Chrome, Edge and Firefox.
-2. Run Lighthouse and field performance checks. Aim for Core Web Vitals in the good range.
-3. Confirm the business's actual service area, current contact details, package inclusions and any applicable application/testing fees with the owner.
-4. Add genuine testimonials or business-owned photography only after receiving approval.
-5. Review repository visibility and older Git history if any previously committed pricing must remain confidential. Removing amounts from current files does not erase previous public commits.
+1. Replace the demo brand, photography where available, locale metadata, licence categories, market-specific legal copy, service area and contact destinations; check that no former-client data remains.
+2. Test the published site on a real phone and in Chrome, Edge and Firefox.
+3. Run Lighthouse and field performance checks. Aim for Core Web Vitals in the good range.
+4. Confirm the business's actual service area, current contact details, package inclusions and any applicable application/testing fees with the owner.
+5. Add genuine testimonials or business-owned photography only after receiving approval.
+6. Review repository visibility and older Git history if any previously committed pricing must remain confidential. Removing amounts from current files does not erase previous public commits.
 
 ## Deployment
 GitHub Pages workflow: `.github/workflows/deploy-pages.yml`.
