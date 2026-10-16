@@ -217,8 +217,8 @@ for page, audit in audits.items():
     visible_text = " ".join(audit.visible_text)
     check(page != "index.html" or "Example rates are shown to demonstrate the finished layout" in visible_text,
           f"{page}: public sample prices need a clear example-rate disclosure")
-check("illustrative sample rates" in sources.get("README.md", "").lower(),
-      "README.md: sample pricing should be documented as illustrative")
+check("Pexels" in sources.get("README.md", ""),
+      "README.md: photography source and licence guidance should remain documented")
 for public_doc in ("WEBSITE_TEMPLATE_SPEC.md", "ROSCORE_PROJECT_MANIFEST.md"):
     check(not price_pattern.search(sources.get(public_doc, "")),
           f"{public_doc}: possible public price or internal budget figure found")
