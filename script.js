@@ -12,11 +12,15 @@
     });
   }
 
-  // Pricing is optional: show buyer-entered amounts only in explicit published mode.
-  const pricingMode = document.body && document.body.dataset.pricingMode === "published" ? "published" : "quote";
+  // Pricing supports published, quote-first and mixed models without leaving blank price rows.
+  const allowedPricingModes = new Set(["published", "quote", "mixed"]);
+  const requestedPricingMode = document.body && document.body.dataset.pricingMode;
+  const pricingMode = allowedPricingModes.has(requestedPricingMode) ? requestedPricingMode : "quote";
   document.querySelectorAll("[data-package-price]").forEach((price) => {
     const amount = price.querySelector("[data-price-amount]");
-    price.hidden = (pricingMode !== "published" && pricingMode !== "mixed") || !amount || !amount.textContent.trim();
+    const priceType = price.dataset.priceMode === "quote" ? "quote" : "published";
+    const modeAllowsPrice = pricingMode === "mixed" || pricingMode === priceType;
+    price.hidden = !modeAllowsPrice || !amount || !amount.textContent.trim();
   });
 
   // Keep the copyright notice correct without requiring an annual content edit.
