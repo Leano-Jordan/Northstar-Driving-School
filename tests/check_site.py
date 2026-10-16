@@ -220,7 +220,7 @@ check("data-current-year" in index and "new Date().getFullYear()" in js,
 check("tel:" in index or "contact.html#demo-enquiry" in index, "Homepage missing contact conversion link")
 check("prefers-reduced-motion" in css, "Reduced-motion fallback missing")
 check("#d8f66a" not in css.lower() and "#d8f66a" not in sources.get("favicon.svg", "").lower(),
-      "Legacy neon-lime accent remains in the autumn palette")
+      "Legacy neon-lime accent remains in the bright premium palette")
 check(":focus-visible" in css, "Visible keyboard focus missing")
 check(re.search(r"@media\s*\([^)]*max-width", css) is not None,
       "No narrow-screen breakpoint")
@@ -230,10 +230,10 @@ check("requestAnimationFrame" in js and "scheduleScrollUI" in js,
       "Scroll UI updates should be scheduled per animation frame")
 check("motionQuery.addEventListener" in js,
       "Reduced-motion preference changes should update JavaScript behaviour")
-check("--espresso:" in css and "--terracotta:" in css and "--amber:" in css,
-      "Semantic autumn colour tokens are missing")
-check("#f7f8f4" not in css.lower() and "#778278" not in css.lower(),
-      "Cool green/sage colour remnants remain in the autumn theme")
+check("--navy:" in css and "--cobalt:" in css and "--sunshine:" in css,
+      "Semantic cobalt and sunshine colour tokens are missing")
+check(not any(color in css.lower() for color in ("#38251d", "#241812", "#b94f2d", "#e8b85c", "#fbf6ef", "#f1e5d7")),
+      "Legacy autumn/brown colours remain in the bright premium theme")
 check("aria-expanded" in js and "aria-expanded" in index,
       "Mobile navigation is missing an accessible expanded state")
 check("has-mobile-menu" in js and ".site-header:not(.has-mobile-menu) nav" in css,
