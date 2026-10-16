@@ -1,7 +1,7 @@
-# Rosscore Project Manifest — Thabz Driving School
+# Rosscore Project Manifest — Northstar Driving Academy
 
 ## Product thesis
-A lightweight lead-generation website for a South African driving school. Primary conversion: private WhatsApp enquiry. Secondary conversion: phone call.
+A lightweight lead-generation website for a South African driving school. Primary conversion: demo contact-section enquiry. Secondary conversion: phone call.
 
 ## Audience and job
 Prospective learner and licence applicants need to understand training categories, trust the business enough to contact it, and get a private quote without a public price list.
