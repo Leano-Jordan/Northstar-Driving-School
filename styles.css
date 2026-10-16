@@ -102,7 +102,7 @@ p { margin-top: 0; }
 .photo-caption strong, .photo-caption small { display: block; }
 .photo-caption strong { font: 600 1.18rem/1.2 var(--font-display); letter-spacing: -.03em; }
 .photo-caption small { margin-top: 4px; color: #ffffffc7; font-size: .77rem; }
-.hero-orbit { position: absolute; pointer-events: none; border: 1px solid #103b2c; border-radius: 50%; }
+.hero-orbit { position: absolute; pointer-events: none; border: 1px solid #38251d; border-radius: 50%; }
 .orbit-one { z-index: 0; width: 120px; height: 120px; left: -39px; bottom: 64px; border-color: #C45A38; }
 .orbit-two { z-index: 0; width: 165px; height: 165px; left: -61px; bottom: 42px; border-color: #C45A387a; }
 .image-credit { position: absolute; bottom: 0; right: 0; color: #8B7A6D; font-size: .62rem; }
@@ -136,7 +136,7 @@ p { margin-top: 0; }
 .training-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
 .training-card { position: relative; min-width: 0; min-height: 380px; padding: 25px 25px 23px; display: flex; flex-direction: column; border: 1px solid #E7D9CB; background: var(--white); overflow: hidden; transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease, border-color .3s ease; }
 .training-card:hover { transform: translateY(-7px); box-shadow: 0 22px 45px #24181212; border-color: #D9C5B0; }
-.card-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #718075; font-size: .63rem; font-weight: 800; letter-spacing: .15em; }
+.card-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #857468; font-size: .63rem; font-weight: 800; letter-spacing: .15em; }
 .card-arrow { display: grid; place-items: center; width: 33px; height: 33px; border: 1px solid #E7D9CB; border-radius: 50%; color: var(--forest); font-size: 1rem; transition: transform .25s ease, background .2s ease; }
 .training-card:hover .card-arrow { transform: rotate(45deg); background: var(--lime); border-color: var(--lime); }
 .card-photo { position: relative; height: 158px; margin: 18px 0 18px; overflow: hidden; isolation: isolate; background: #E7D9CB; }
@@ -230,10 +230,10 @@ p { margin-top: 0; }
 .footer-bottom { min-height: 52px; display: flex; align-items: center; justify-content: space-between; gap: 15px; flex-wrap: wrap; font-size: .65rem; }
 .footer-bottom a { font-size: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .scroll-progress { position: fixed; z-index: 1001; top: 0; left: 0; width: 100%; height: 3px; background: var(--coral); transform: scaleX(0); transform-origin: left; pointer-events: none; }
-.floating-whatsapp { position: fixed; z-index: 95; right: 22px; bottom: 22px; min-height: 52px; padding: 0 17px; display: inline-flex; align-items: center; gap: 11px; background: var(--lime); color: var(--forest-deep); border: 1px solid #103b2c15; box-shadow: 0 10px 30px #092a202b; font-size: .78rem; font-weight: 900; text-decoration: none; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity .25s ease, visibility .25s ease, transform .25s ease, background .2s ease; }
+.floating-whatsapp { position: fixed; z-index: 95; right: 22px; bottom: 22px; min-height: 52px; padding: 0 17px; display: inline-flex; align-items: center; gap: 11px; background: var(--lime); color: var(--forest-deep); border: 1px solid #38251d15; box-shadow: 0 10px 30px #2418122b; font-size: .78rem; font-weight: 900; text-decoration: none; opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity .25s ease, visibility .25s ease, transform .25s ease, background .2s ease; }
 .floating-whatsapp.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
 .floating-whatsapp:hover { background: #F2D49A; }
-.floating-whatsapp .chat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--forest-bright); box-shadow: 0 0 0 4px #103b2c15; }
+.floating-whatsapp .chat-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--forest-bright); box-shadow: 0 0 0 4px #38251d15; }
 .floating-whatsapp span:last-child { color: var(--coral); font-size: 1rem; }
 
 /* Supporting-page layouts */
