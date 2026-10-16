@@ -223,10 +223,15 @@ check("Pexels" in sources.get("README.md", ""),
 for public_doc in ("WEBSITE_TEMPLATE_SPEC.md", "ROSCORE_PROJECT_MANIFEST.md"):
     check(not price_pattern.search(sources.get(public_doc, "")),
           f"{public_doc}: possible public price or internal budget figure found")
+business_config = {}
 try:
-    json.loads(sources.get("data/business.json", ""))
+    business_config = json.loads(sources.get("data/business.json", ""))
 except json.JSONDecodeError as exc:
     errors.append(f"data/business.json: invalid JSON: {exc}")
+check(all(key in business_config for key in ("phone", "phoneTel", "whatsappUrl", "email")),
+      "Business config must define all supported contact channels")
+check(business_config.get("isDemo") is True and all(not business_config.get(key) for key in ("phone", "phoneTel", "whatsappUrl", "email")),
+      "Fictional Northstar profile must not publish unverified or fabricated contact details")
 
 index = sources.get("index.html", "")
 css = sources.get("styles.css", "")
@@ -254,7 +259,7 @@ check("motionQuery.addEventListener" in js,
       "Reduced-motion preference changes should update JavaScript behaviour")
 check("--navy:" in css and "--cobalt:" in css and "--sunshine:" in css,
       "Semantic cobalt and sunshine colour tokens are missing")
-check(not any(color in css.lower() for color in ("#38251d", "#241812", "#b94f2d", "#e8b85c", "#fbf6ef", "#f1e5d7")),
+check(not any(color in css.lower() for color in ("#38251d", "#241812", "#b94f2d", "#e8b85c", "#fbf6ef", "#f1e5d7", "#7b6a5d", "#dcc5ae")),
       "Legacy autumn/brown colours remain in the bright premium theme")
 
 # Measure text and CTA colour pairs from the actual root design tokens.
@@ -303,7 +308,25 @@ check("floatingSuppressed = floatingVisibleTargets.size > 0" in js,
       "Floating demo-contact CTA can obscure the contact area or footer")
 
 check("floating-demo-contact" in js and ".floating-demo-contact" in css,
-      "Floating demo-contact CTA naming is inconsistent between JavaScript and CSS")
+      "Floating contact CTA naming is inconsistent between JavaScript and CSS")
+check('chat.dataset.event = "CONTACT_ENQUIRY_CLICK"' in js and "DEMO_CONTACT_CLICK" not in js,
+      "Floating enquiry CTA should use the shared contact analytics event")
+check('element.closest("[data-event]")' in js,
+      "Contact analytics must use event delegation so configured links are tracked")
+check('window.fetch("data/business.json"' in js,
+      "Contact routes must be loaded from the central business configuration")
+check("api.whatsapp.com" in js and "wa.me" in js and "mailto:" in js and "phoneTel" in js,
+      "Contact route validation must cover telephone, WhatsApp and email destinations")
+check('data-contact-status' in sources.get("contact.html", "") and 'role="status"' in sources.get("contact.html", ""),
+      "Contact card needs an accessible honest configuration status")
+check(all(token in sources.get("contact.html", "") for token in ('data-contact-phone', 'data-contact-whatsapp', 'data-contact-email')),
+      "Contact card must support all configured channels without invented destinations")
+check('loading="eager" fetchpriority="high"' in sources.get("contact.html", ""),
+      "Contact hero image must not be lazy-loaded above the fold")
+check('fetchpriority="high"' in sources.get("services.html", ""),
+      "Training hero image should be prioritised above the fold")
+check("#7b6a5d" not in css.lower() and "#dcc5ae" not in css.lower(),
+      "Contact styling must not reintroduce legacy brown accent colours")
 combined_html = "\\n".join(sources[page] for page in PAGES)
 check("WHATSAPP_CLICK" not in combined_html and "PHONE_CLICK" not in combined_html,
       "Demo-only contact links still claim to trigger live WhatsApp/phone actions")
