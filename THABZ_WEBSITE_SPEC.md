@@ -42,3 +42,13 @@ Address, service coverage, hours, transmission type, pick-up/drop-off, instructo
 
 ## Production gate
 Owner feedback, current details, approved imagery, final scope and budget must be agreed before production launch.
+
+
+## Visual system update — autumn road-trip palette
+- Primary: espresso brown `#38251D` for stable, professional structure.
+- Secondary: burnt terracotta `#B94F2D` for energetic emphasis and primary links.
+- Accent: warm amber `#E8B85C` for highlights and secondary CTA surfaces.
+- Canvas: warm cream `#FBF6EF`; supporting surface `#F1E5D7`.
+- Body text: `#2B2521`; muted text `#6F625A`; borders `#E7D9CB`.
+- Rationale: a restrained warm palette differentiates this template from common blue/green driving-school branding while retaining dark/light hierarchy. Avoid relying on hue alone; preserve strong text contrast and visible focus states.
+- Accessibility target: WCAG AA text contrast (4.5:1 for ordinary text; 3:1 for large text).
