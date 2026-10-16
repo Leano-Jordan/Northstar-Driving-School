@@ -16,7 +16,7 @@
   const pricingMode = document.body && document.body.dataset.pricingMode === "published" ? "published" : "quote";
   document.querySelectorAll("[data-package-price]").forEach((price) => {
     const amount = price.querySelector("[data-price-amount]");
-    price.hidden = pricingMode !== "published" || !amount || !amount.textContent.trim();
+    price.hidden = (pricingMode !== "published" && pricingMode !== "mixed") || !amount || !amount.textContent.trim();
   });
 
   // Keep the copyright notice correct without requiring an annual content edit.
