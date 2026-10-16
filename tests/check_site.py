@@ -258,8 +258,13 @@ check(not any(color in css.lower() for color in ("#38251d", "#241812", "#b94f2d"
 
 # Measure text and CTA colour pairs from the actual root design tokens.
 def root_color(token):
-    match = re.search(rf"(?m)^\s*{re.escape(token)}\s*:\s*(#[0-9a-fA-F]{6})\s*;", css)
-    return match.group(1) if match else None
+    # Parse CSS declarations line-by-line to avoid fragile dynamic regex escaping.
+    for line in css.splitlines():
+        name, separator, value = line.partition(":")
+        if separator and name.strip() == token:
+            candidate = value.strip().removesuffix(";").strip()
+            return candidate if re.fullmatch(r"#[0-9a-fA-F]{6}", candidate) else None
+    return None
 
 
 palette = {
