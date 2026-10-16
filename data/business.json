@@ -5,7 +5,7 @@
   "phoneTel": "",
   "whatsappUrl": "",
   "marketContext": "South Africa is an example locale, not a universal assumption. Confirm each buyer’s jurisdiction and service area.",
-  "priceDisclosure": "Demo template contains no published prices. Populate only with buyer-approved details.",
+  "priceDisclosure": "Illustrative sample rates demonstrate the finished layout. Replace with business-approved prices and inclusions before launch.",
   "claimsRequiringVerification": [
     "current prices and package inclusions",
     "exact service area and address",
@@ -29,13 +29,13 @@
     "published-price, quote-first or mixed pricing model"
   ],
   "pricing": {
-    "mode": "quote",
+    "mode": "published",
     "supportedModes": [
       "published",
       "quote",
       "mixed"
     ],
-    "rule": "Use buyer-approved public amounts only. In published mode, enter an actual amount in the matching data-price-amount field in index.html; empty values remain hidden.",
+    "rule": "Homepage sample rates are R350 per 60-minute lesson and R1,600 for five lessons, plus a tailored quote option. Replace with business-approved amounts before launch.",
     "consumerGuidance": "Make lesson duration, rates, package inclusions, cancellation terms and separate testing/application fees easy to compare.",
     "quoteGuidance": "Use for genuinely tailored, specialist or experience-dependent training; do not hide fixed prices just because quote-first was the first client's preference."
   },
