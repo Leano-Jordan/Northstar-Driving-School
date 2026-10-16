@@ -79,9 +79,9 @@ p { margin-top: 0; }
 .button-primary:hover { background: var(--cobalt); transform: translateY(-3px); box-shadow: 0 12px 20px #152a4a19; }
 .button-arrow { display: inline-grid; place-items: center; width: 27px; height: 27px; border-radius: 50%; background: #ffffff17; color: var(--sunshine); font-size: 1.08rem; transition: transform .2s ease; }
 .button:hover .button-arrow { transform: translate(2px,-2px); }
-.button-lime { background: var(--sunshine); color: var(--navy-deep); }
-.button-lime .button-arrow { color: var(--navy-deep); background: #152a4a0e; }
-.button-lime:hover { background: #F2D49A; transform: translateY(-2px); }
+.button-sunshine { background: var(--sunshine); color: var(--navy-deep); }
+.button-sunshine .button-arrow { color: var(--navy-deep); background: #152a4a0e; }
+.button-sunshine:hover { background: #FFE39A; transform: translateY(-2px); }
 .text-link { display: inline-flex; align-items: center; gap: 10px; color: var(--navy); font-size: .84rem; font-weight: 800; text-decoration: none; }
 .text-link > span { color: var(--coral); transition: transform .2s ease; }
 .text-link:hover > span { transform: translate(0,3px); }
@@ -478,7 +478,7 @@ main[tabindex="-1"]:focus-visible { outline: 3px solid var(--coral); outline-off
 }
 
 
-/* Brand polish: espresso, terracotta, amber and warm-paper accents. */
+/* Bright brand polish: cobalt, sunshine, sky and clean-paper accents. */
 :root { --accent-wash: #eaf2ff; --surface-warm: #eaf2ff; }
 .site-header { border-bottom-color: #152a4a17; }
 .site-header.is-scrolled { box-shadow: 0 12px 32px #152a4a12; }
@@ -560,7 +560,7 @@ main[tabindex="-1"]:focus-visible { outline: 3px solid var(--coral); outline-off
 }
 
 
-/* Commercial polish: a consistent autumn accent and a purposeful shared site frame. */
+/* Commercial polish: a consistent bright-premium accent and purposeful shared site frame. */
 .site-header { min-height: 86px; padding-inline: max(28px, calc((100% - 1320px) / 2)); gap: clamp(16px, 2vw, 32px); background: #f7faffF5; border-bottom: 1px solid #152a4a18; }
 .site-header nav { gap: clamp(15px, 2vw, 30px); }
 .nav-link { white-space: nowrap; }
