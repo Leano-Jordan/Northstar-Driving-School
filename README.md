@@ -58,3 +58,6 @@ Replace stock with owner-approved photography when available. Keep image credits
 - Static checks do not prove browser rendering, successful external-image delivery or real-world contact delivery; verify the configured channel destinations on a phone before launch.
 - A commit is not proof of deployment. Verify the Pages workflow and published URL before sharing it.
 - Before launch, confirm actual services, approved prices, contact destinations, owner-approved photography, service area, legal copy and domain ownership.
+
+## Search and sharing metadata
+The public pages have canonical URLs, Open Graph page URLs, and an XML sitemap referenced from robots.txt. If the site is moved from GitHub Pages to a custom domain or repository path, update canonical URLs, sitemap URLs and the sitemap test together.
