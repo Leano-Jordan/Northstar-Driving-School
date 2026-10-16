@@ -51,7 +51,9 @@
         const phone = String(business.phone || "").trim();
         const dialString = String(business.phoneTel || "").replace(/[^+\d]/g, "");
         if (phone && /^\+[1-9]\d{6,14}$/.test(dialString)) {
-          enabledCount += Number(enableChannel("[data-contact-phone]", "tel:" + dialString, "Call the school · " + phone + " ↗"));
+          enabledCount += Number(enableChannel("[data-contact-phone]", "tel:" + dialString, phone + " ↗"));
+          const phoneLink = document.querySelector("[data-contact-phone]");
+          if (phoneLink) phoneLink.setAttribute("aria-label", "Call the school at " + phone);
         }
 
         let whatsappHref = "";
