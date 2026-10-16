@@ -12,8 +12,8 @@ Rosscore product quality is more important than visual sameness. This concept sh
 - No public price list, fake booking widget, review score, pass rate, qualification, accreditation or trust badge.
 
 ## Visual system
-- Palette: espresso `#38251D`, burnt terracotta `#B94F2D`, warm amber `#E8B85C`, warm cream `#FBF6EF`, sand `#F1E5D7`, and ink `#2B2521`.
-- Use warm neutral surfaces as the foundation, terracotta for emphasis, and amber sparingly for calls to action and visual markers.
+- Palette: cobalt `#2458D3`, deep navy `#152A4A`, sunshine `#FFD166`, clean white `#FFFFFF`, sky blue `#EAF2FF`, ink `#17243A`, and coral `#F06D4F`.
+- Use clean white and sky-blue surfaces as the foundation, cobalt for navigation and primary actions, sunshine for optimistic highlights, and coral sparingly for secondary emphasis.
 - Strong editorial display type, readable body copy, natural driving-learning imagery, comfortable spacing, small-radius cards and deliberate contrast.
 - Cosmetic motion is restrained: staged section reveals, card image movement, route motif animation, scroll progress and a continuous ticker. Respect reduced-motion preferences in both CSS and JavaScript.
 - Photographs are licensed illustrative stock, not evidence of the buyer's staff, cars, location, clients or results. Prefer buyer-approved imagery after permission is confirmed.
