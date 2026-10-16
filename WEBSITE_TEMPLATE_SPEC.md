@@ -4,7 +4,7 @@
 A premium, photo-led driving-school website template for independent instructors, local schools and international buyers. Northstar is fictional demo branding, not a live business.
 
 ## Visitor journey
-Understand training options → compare rates and packages where published → review FAQs → reach a clear enquiry or booking channel.
+Understand training options → compare approved rates and packages where published → review FAQs → reach an honest contact preview that activates only verified school-owned channels.
 
 ## Visual direction
 - Bright premium palette: cobalt #2458D3, deep navy #152A4A, sunshine #FFD166, white #FFFFFF, sky blue #EAF2FF and ink #17243A.
@@ -16,14 +16,14 @@ Understand training options → compare rates and packages where published → r
 
 ## Scope
 - Home page, training-options page, contact preview and 404 page.
-- Static HTML/CSS/vanilla JavaScript; no booking backend, payment flow or database.
-- Demo enquiry actions lead to a contact preview. Connect buyer-owned phone, WhatsApp, email or booking destinations only after confirmation.
+- Static HTML/CSS/vanilla JavaScript; no booking backend, payment flow, stored enquiry form or database.
+- Demo enquiry actions lead to the contact card. The card reads data/business.json and exposes only valid configured phone, WhatsApp or email destinations. Keep the fields empty until the owner confirms them. Direct channel links are not a substitute for a stored lead-capture form; configure a form provider or backend if leads must be recorded.
 - Mobile-first layout, accessible focus, responsive image markup, lazy-loaded secondary photography and reduced-motion support.
 - SEO metadata and structured business data use verified content only.
 
 ## Pricing is configurable
-- The demo starts in quote mode via data-pricing-mode="quote" on the homepage; no price amounts are invented.
-- To publish rates, change this to data-pricing-mode="published" and enter owner-approved amounts in the matching data-price-amount fields in index.html. A price appears only when published mode is on and an amount exists.
+- The current sample homepage deliberately displays clearly disclosed illustrative rates using data-pricing-mode="published", to show buyers the intended design. They are not approved rates for a real school.
+- Before launch, replace every sample amount with owner-approved prices or switch data-pricing-mode="quote" to hide the examples. The JavaScript also supports "mixed" mode. An amount is shown only when its pricing mode permits it and a data-price-amount value exists.
 - The template offers single-lesson, lesson-package and tailored-training examples; remove anything the actual school does not provide.
 - For published rates, show lesson duration, inclusions, package terms/cancellation rules and separate licensing/test charges where relevant.
 - Quote-first pricing is appropriate for custom or specialist training, but is not a universal restriction. A mixed model is also supported.
