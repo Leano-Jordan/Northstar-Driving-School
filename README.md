@@ -30,7 +30,7 @@ A mobile-first static website for Northstar Driving Academy, designed around a d
 - Static HTML, CSS and vanilla JavaScript; no booking backend, database or framework.
 - Responsive layouts, accessible mobile navigation, skip link, visible focus styles, native accessible FAQ disclosures and reduced-motion support.
 - Motion includes a continuous editorial ticker, scroll reveals, subtle hover feedback, a route motif and scroll progress.
-- Main conversion path: WhatsApp and telephone.
+- Demo conversion path: contact-section anchor. No live messaging or calling destination is configured.
 - SEO metadata and basic structured business data are included. No unverified address, reviews, pass rates, opening hours, instructor credentials or service guarantees are invented.
 
 ## Development workflow
@@ -50,6 +50,5 @@ GitHub Pages workflow: `.github/workflows/deploy-pages.yml`.
 
 
 ## Contact links and social profiles
-- Verified public contact channels in the project: phone and WhatsApp, both using Demo contact details.
-- No confirmed public email address or official Facebook, Instagram, TikTok or other social-profile URL was available in the supplied project records during this update. The site therefore links directly to the verified phone and WhatsApp channels rather than inventing handles or sending visitors to unrelated profiles.
+- The demo intentionally contains no phone, WhatsApp, email or social-profile destination. Connect buyer-owned channels only after purchase and written confirmation.
 - The footer's WhatsApp mark uses the Simple Icons SVG under CC0; the telephone icon is an inline SVG based on Lucide's open-source icon style. No icon CDN or paid icon pack is required.
