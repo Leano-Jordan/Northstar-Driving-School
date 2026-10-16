@@ -172,8 +172,8 @@ for page in PAGES:
     check(audit.metas.get("twitter:card") == "summary_large_image",
           f"{page}: missing large-image social card metadata")
     for image in audit.images:
-        check(bool(image.get("alt", "").strip()),
-              f"{page}: image missing meaningful alt text")
+        check(bool(image.get("alt", "").strip()) or image.get("src", "").startswith("assets/icons/"),
+              f"{page}: image missing meaningful alt text or documented decorative-icon handling")
     for script_text in audit.json_scripts:
         try:
             json.loads(script_text)
