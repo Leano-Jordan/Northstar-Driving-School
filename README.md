@@ -1,62 +1,57 @@
-# Northstar Driving Academy — reusable website template
+# Northstar Driving Academy — reusable driving-school website
 
-A mobile-first static website template for driving schools, demonstrated with the fictional Northstar Driving Academy identity. It pairs a bright premium cobalt-and-sunshine visual system with clear training pathways and a conversion-focused demo enquiry journey.
+A bright, premium, photo-led static website template for independent instructors, local driving schools and international buyers. Northstar is fictional demo branding, not a live business.
 
 ## Customer journey
-- Start with a clear brand statement and an illustrative driving lesson photo.
-- Explore the approach and the learner, driving licence, Code 8/10, Code 14, PDP and lesson options.
-- Message or call Northstar to confirm availability, current package inclusions and an accurate quote.
-- No package prices are published on the website.
+- Lead with clear, image-led messaging and a next-step action.
+- Explore learner/theory support, practical lessons, test preparation, refresher lessons and specialist training routes.
+- Compare verified prices and lesson packages where the school publishes rates, or request an itemised quote for tailored work.
+- Move to the buyer's verified phone, WhatsApp, email or booking channel after configuration.
 
-## Demo identity
-- Fictional demo brand: Northstar Driving Academy.
-- No real customer contact details are included.
-- Contact actions route to the demo contact section and must be connected to the buyer's verified enquiry channels before launch.
-- Replace the demo brand, service area, contact channels and business claims for each buyer.
+## Pricing configuration
+- The demo starts in quote mode; it does not invent or publish amounts.
+- The homepage body uses data-pricing-mode="quote". To show approved rates, switch it to data-pricing-mode="published" and enter real amounts in the matching data-price-amount elements in index.html. An amount stays hidden when quote mode is active or the amount is empty.
+- Remove any package category the buyer does not offer. Public rates should identify lesson duration, package inclusions, cancellation conditions and separate fees.
+- Never store confidential internal budgets or private notes in this public repository.
 
-## Hero photography
-- The temporary illustrative hero image is by Ron Lach on Pexels: https://www.pexels.com/photo/man-in-white-and-black-striped-dress-shirt-driving-car-9518029/
-- Pexels lists the image as free to use. It depicts a Black adult sitting beside a young learner during a practice drive; it is not a photograph of Northstar or a verified member of the business.
-- Replace this stock image with owner-approved photography before claiming it shows the actual instructor or vehicle.
+## Demo identity and contact
+- Northstar is fictional. No real phone number, WhatsApp destination, email, address or booking link is configured.
+- Enquiry buttons lead to a contact preview until buyer-owned destinations are approved.
+- Demo status is discreet in the footer; there is no full-width warning banner.
+- Replace brand, service area, contact channels, service claims and legal copy for each buyer.
 
-## Training-card photography
-- Learner's licence card: Ron Lach, Pexels — https://www.pexels.com/photo/boy-in-gray-sweater-driving-car-9518016/ (free under the Pexels License).
-- Driving licence card: Magda Ehlers, Pexels — https://www.pexels.com/photo/a-car-driving-on-the-road-3886669/ (Chapman's Peak Drive, Cape Town; free under the Pexels License).
-- PDP / progress card: Gugulethu Ndlalani, Pexels — https://www.pexels.com/photo/black-men-and-freight-rusty-transport-4612683/ (Pimville, Gauteng; free under the Pexels License).
-- Pexels permits commercial website use without required attribution: https://www.pexels.com/license/. The stock photos are illustrative, not endorsements or photographs of Northstar's own clients, staff or vehicles.
+## Photography sources
+The demo uses Pexels CDN photos as illustrative stock images. Pexels licence: https://www.pexels.com/license/. These do not represent Northstar’s real instructors, learners, vehicle fleet or location.
+
+- Homepage hero, Ron Lach: https://www.pexels.com/photo/man-in-white-and-black-striped-dress-shirt-driving-car-9518029/
+- Learner training card, Ron Lach: https://www.pexels.com/photo/boy-in-gray-sweater-driving-car-9518016/
+- In-car coaching, Ron Lach: https://www.pexels.com/photo/adult-man-looking-at-a-teenager-seated-on-driver-s-side-of-a-car-9518018/
+- Road view, Malte Luk: https://www.pexels.com/photo/a-person-driving-a-car-on-the-road-1106435/
+- Curving road, Ricky Esquivel: https://www.pexels.com/photo/car-on-the-road-3042415/
+- South African road example, Magda Ehlers: https://www.pexels.com/photo/a-car-driving-on-the-road-3886669/
+- Heavy vehicle on road: https://www.pexels.com/photo/truck-is-driving-on-road-20234936/
+- Existing professional transport example, Gugulethu Ndlalani: https://www.pexels.com/photo/black-men-and-freight-rusty-transport-4612683/
+
+Replace stock with owner-approved photography when available. Keep image credits and alt text aligned with the actual source.
+
+## Open-source icons
+- Six SVG line icons are bundled in assets/icons, using a Lucide-style outline and ISC licence. See assets/icons/README.md and https://lucide.dev/icons/.
+- Assets are local SVGs: no paid library, icon font or external icon CDN is needed.
 
 ## Site experience
-- Pages: `index.html`, `services.html`, `contact.html`, and `404.html`.
-- Static HTML, CSS and vanilla JavaScript; no booking backend, database or framework.
-- Responsive layouts, accessible mobile navigation, skip link, visible focus styles, native accessible FAQ disclosures and reduced-motion support.
-- Motion includes a continuous editorial ticker, scroll reveals, subtle hover feedback, a gently moving route motif and scroll progress. Reduced-motion preferences are respected in CSS and JavaScript, including preference changes while the page is open.
-- Demo conversion path: contact-section anchor. No live messaging or calling destination is configured.
-- SEO metadata and basic structured business data are included. No unverified address, reviews, pass rates, opening hours, instructor credentials or service guarantees are invented.
+- Pages: index.html, services.html, contact.html, and 404.html.
+- Static HTML/CSS/vanilla JavaScript; no framework, booking backend, database or payments.
+- Responsive layouts, accessible navigation, skip link, focus states, native FAQ disclosures, informative image alt text and reduced-motion support.
+- Photography appears in the home hero, training cards and gallery, inner training hero and contact preview.
+- No unverified address, opening hours, reviews, pass rates, credentials or guarantees are invented.
 
-## Local and international reuse
+## Terminology and international reuse
+- Lead with portable categories: learner licence/permit, theory support, practical driving lessons, test preparation, refresher lessons and specialist training.
+- South African terms such as Code 8, Code 10, Code 14 and PDP/PrDP are regional examples, not universal categories.
+- For each market, update locale/language, licence terminology and eligibility guidance, service area, currency, calling code, enquiry channel, privacy/terms and structured business data.
 
-- The visual system, page structure and neutral enquiry journey can be adapted to local independent instructors, multi-vehicle schools or larger training providers.
-- This demo is South African by default. “Code 8”, “Code 10”, “Code 14”, “PDP”, “learner's licence”, en-ZA language metadata and South Africa references are jurisdiction-specific, not international legal advice.
-- For another market, replace licence terminology and eligibility guidance with the relevant local rules; then update spelling, language/locale metadata, currency, service-area wording, phone country code, messaging channel, privacy/terms requirements and schema markup.
-- Translate copy rather than relying on flags or colour alone to signal locale. Keep the demo label until all fictional identity, destination and legal-content placeholders are replaced and verified.
-
-## Development workflow
-- The single working branch is `main`. All site work and commits happen directly on `main`; do not create working branches or pull requests.
-- Run `python3 tests/check_site.py` before committing site changes. The repository quality workflow also runs on pushes to `main`.
-- Detailed working rules are in `AGENTS.md`; quality-gate details are in `docs/QUALITY-GATES.md`.
-
-## Before launch
-1. Replace the demo brand, photography where available, locale metadata, licence categories, market-specific legal copy, service area and contact destinations; check that no former-client data remains.
-2. Test the published site on a real phone and in Chrome, Edge and Firefox.
-3. Run Lighthouse and field performance checks. Aim for Core Web Vitals in the good range.
-4. Confirm the business's actual service area, current contact details, package inclusions and any applicable application/testing fees with the owner.
-5. Add genuine testimonials or business-owned photography only after receiving approval.
-6. Review repository visibility and older Git history if any previously committed pricing must remain confidential. Removing amounts from current files does not erase previous public commits.
-
-## Deployment
-GitHub Pages workflow: `.github/workflows/deploy-pages.yml`.
-
-
-## Contact links and social profiles
-- The demo intentionally contains no phone, WhatsApp, email or social-profile destination. Connect buyer-owned channels only after purchase and written confirmation.
-- The footer uses a neutral inline message icon and an inline telephone-style contact icon; no icon CDN or paid icon pack is required.
+## Development and release
+- Work directly on the single main branch; no feature branches or pull requests for routine changes.
+- Run python3 tests/check_site.py before and after meaningful changes. GitHub Actions runs static checks on pushes to main.
+- A commit is not proof of deployment. Verify the Pages workflow and published URL before sharing it.
+- Before launch, confirm actual services, approved prices, contact destinations, owner-approved photography, service area, legal copy and domain ownership.
