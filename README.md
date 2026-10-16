@@ -9,14 +9,16 @@ A bright, premium, photo-led static website template for independent instructors
 - Move to the buyer's verified phone, WhatsApp, email or booking channel after configuration.
 
 ## Pricing configuration
-- The demo starts in quote mode; it does not invent or publish amounts.
-- The homepage body uses data-pricing-mode="quote". To show approved rates, switch it to data-pricing-mode="published" and enter real amounts in the matching data-price-amount elements in index.html. An amount stays hidden when quote mode is active or the amount is empty.
+- The homepage currently displays clearly disclosed illustrative rates in data-pricing-mode="published" mode so buyers can judge the finished pricing layout. These are not approved school prices.
+- Before launch, replace sample amounts with buyer-approved rates and confirm lesson duration, package inclusions, cancellations and separate fees; or switch to data-pricing-mode="quote" to hide the example prices. The script also supports mixed pricing.
+- An amount stays hidden when quote mode is active or the matching data-price-amount field is empty.
 - Remove any package category the buyer does not offer. Public rates should identify lesson duration, package inclusions, cancellation conditions and separate fees.
 - Never store confidential internal budgets or private notes in this public repository.
 
 ## Demo identity and contact
-- Northstar is fictional. No real phone number, WhatsApp destination, email, address or booking link is configured.
-- Enquiry buttons lead to a contact preview until buyer-owned destinations are approved.
+- Northstar is fictional. No real phone number, WhatsApp destination, email, address or booking link is configured in this repository.
+- The contact card reads data/business.json and only activates confirmed fields: phone (display label), phoneTel (international E.164 number beginning with +), whatsappUrl (HTTPS wa.me/<number> or api.whatsapp.com/send?phone=<digits>) and email (valid address).
+- Missing, malformed or blank channels stay disabled and the contact card explains that details must be added before launch. Click-to-call, WhatsApp and mailto links do not submit a stored form; real lead capture requires a configured form provider or backend.
 - Demo status is discreet in the footer; there is no full-width warning banner.
 - Replace brand, service area, contact channels, service claims and legal copy for each buyer.
 
@@ -53,5 +55,6 @@ Replace stock with owner-approved photography when available. Keep image credits
 ## Development and release
 - Work directly on the single main branch; no feature branches or pull requests for routine changes.
 - Run python3 tests/check_site.py before and after meaningful changes. GitHub Actions runs static checks on pushes to main.
+- Static checks do not prove browser rendering, successful external-image delivery or real-world contact delivery; verify the configured channel destinations on a phone before launch.
 - A commit is not proof of deployment. Verify the Pages workflow and published URL before sharing it.
 - Before launch, confirm actual services, approved prices, contact destinations, owner-approved photography, service area, legal copy and domain ownership.
