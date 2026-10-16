@@ -49,3 +49,8 @@ Static checks cover HTML metadata, links, image alt text, responsive markup, ico
 - Work directly on the single main branch; no feature branches or pull requests for routine iterations.
 - Confirm GitHub Actions, inspect the published URL and test mobile/desktop layouts before calling it ready.
 - Production requires approval of brand, photography, services, pricing model, contact destinations, legal copy and domain ownership.
+
+## Search discoverability
+- Canonical and Open Graph URLs must match the deployed public page URLs.
+- Keep sitemap.xml limited to indexable canonical pages; exclude 404.html.
+- robots.txt must reference the sitemap. Update the URLs and tests if the hosting path or domain changes.
