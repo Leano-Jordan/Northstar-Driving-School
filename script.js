@@ -1,7 +1,16 @@
 (() => {
   "use strict";
 
-  const reducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const motionQuery = window.matchMedia ? window.matchMedia("(prefers-reduced-motion: reduce)") : null;
+  let reducedMotion = Boolean(motionQuery && motionQuery.matches);
+  if (motionQuery && typeof motionQuery.addEventListener === "function") {
+    motionQuery.addEventListener("change", (event) => {
+      reducedMotion = event.matches;
+      if (reducedMotion) {
+        document.querySelectorAll("[data-reveal]").forEach((element) => element.classList.add("is-visible"));
+      }
+    });
+  }
 
   // Keep the copyright notice correct without requiring an annual content edit.
   document.querySelectorAll("[data-current-year]").forEach((element) => {
@@ -27,8 +36,16 @@
     const floating = document.querySelector(".floating-whatsapp");
     if (floating) floating.classList.toggle("is-visible", scrollTop > 240 && !floatingSuppressed);
   }
-  window.addEventListener("scroll", updateScrollUI, { passive: true });
-  window.addEventListener("resize", updateScrollUI, { passive: true });
+  let scrollFrame = 0;
+  function scheduleScrollUI() {
+    if (scrollFrame) return;
+    scrollFrame = window.requestAnimationFrame(() => {
+      scrollFrame = 0;
+      updateScrollUI();
+    });
+  }
+  window.addEventListener("scroll", scheduleScrollUI, { passive: true });
+  window.addEventListener("resize", scheduleScrollUI, { passive: true });
 
   if (header && nav && menuToggle) {
     header.classList.add("has-mobile-menu");
@@ -57,6 +74,9 @@
     document.addEventListener("click", (event) => {
       if (header.classList.contains("is-menu-open") && !header.contains(event.target)) closeMenu();
     });
+    window.addEventListener("resize", () => {
+      if (window.matchMedia && !window.matchMedia("(max-width: 760px)").matches) closeMenu();
+    }, { passive: true });
   }
 
   const chat = document.createElement("a");
