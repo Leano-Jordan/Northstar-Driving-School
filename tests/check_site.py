@@ -9,7 +9,7 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = ("index.html", "services.html", "contact.html", "404.html")
-REQUIRED_FILES = (*PAGES, "styles.css", "homepage-refinements.css", "script.js", "README.md", "favicon.svg")
+REQUIRED_FILES = (*PAGES, "styles.css", "homepage-refinements.css", "script.js", "README.md", "favicon.svg", "robots.txt", "sitemap.xml")
 errors = []
 
 
@@ -133,6 +133,8 @@ sources[".github/workflows/site-quality.yml"] = read_file(".github/workflows/sit
 sources["data/business.json"] = read_file("data/business.json")
 sources["WEBSITE_TEMPLATE_SPEC.md"] = read_file("WEBSITE_TEMPLATE_SPEC.md")
 sources["ROSCORE_PROJECT_MANIFEST.md"] = read_file("ROSCORE_PROJECT_MANIFEST.md")
+sources["robots.txt"] = read_file("robots.txt")
+sources["sitemap.xml"] = read_file("sitemap.xml")
 
 audits = {}
 for page in PAGES:
@@ -153,6 +155,10 @@ for page in PAGES:
           f"{page}: missing/empty title")
     check(bool(audit.metas.get("viewport")), f"{page}: missing viewport metadata")
     check(bool(audit.metas.get("description")), f"{page}: missing meta description")
+    if page in ("index.html", "services.html", "contact.html"):
+        canonical = re.search(r'<link\\s+rel="canonical"\\s+href="([^"]+)"', source, re.I)
+        check(canonical is not None, f"{page}: missing canonical URL")
+        check(bool(audit.metas.get("og:url")), f"{page}: missing Open Graph URL")
     check(bool(audit.metas.get("theme-color")), f"{page}: missing theme-color metadata")
     check(audit.main_landmarks == 1, f"{page}: expected one main#main-content landmark")
     check(audit.focusable_main, f"{page}: skip-link target should be programmatically focusable")
@@ -180,6 +186,19 @@ for page in PAGES:
             json.loads(script_text)
         except json.JSONDecodeError as exc:
             errors.append(f"{page}: invalid JSON-LD: {exc}")
+
+# Keep crawler discovery aligned with the public GitHub Pages base path.
+site_base = "https://leano-jordan.github.io/Northstar-Driving-School/"
+check(f"Sitemap: {site_base}sitemap.xml" in sources.get("robots.txt", ""),
+      "robots.txt: sitemap location missing or incorrect")
+sitemap_urls = re.findall(r"<loc>(.*?)</loc>", sources.get("sitemap.xml", ""))
+expected_sitemap_urls = {site_base, site_base + "services.html", site_base + "contact.html"}
+check(set(sitemap_urls) == expected_sitemap_urls,
+      "sitemap.xml: must list the three canonical public pages and exclude 404")
+for page in ("index.html", "services.html", "contact.html"):
+    expected_url = site_base if page == "index.html" else site_base + page
+    check(f'<link rel="canonical" href="{expected_url}">' in sources.get(page, ""),
+          f"{page}: canonical URL must match the GitHub Pages deployment path")
 
 # Validate local files and fragment targets across every page.
 for page, audit in audits.items():
