@@ -351,6 +351,12 @@ check('branches: ["main"]' in workflow and "pull_request:" not in workflow,
 check('class="demo-banner"' not in combined_html, "Prominent demo/warning banner must not return")
 check('data-pricing-mode="published"' in index, "Homepage should declare its published example pricing mode")
 check("data-package-price" in index and "data-price-amount" in index, "Homepage lacks optional published-price fields")
+check('data-price-mode="published"' in index and 'data-price-mode="quote"' in index,
+      "Pricing cards must declare their published-rate or quote-first display mode")
+check('allowedPricingModes = new Set(["published", "quote", "mixed"])' in js,
+      "Pricing script must explicitly validate all three supported pricing modes")
+check('pricingMode === "mixed" || pricingMode === priceType' in js,
+      "Mixed pricing mode must show both fixed rates and tailored quotes")
 check("photo-journal-grid" in index and index.count("<img") >= 7, "Homepage should use multiple driving-school photos and a photo-led story collage")
 check("DEMO_CONTACT_CLICK" not in combined_html, "Internal demo event naming should not leak into customer-facing pages")
 check("8550826" in index, "Homepage collage should include varied real learner-driving imagery")
