@@ -6,7 +6,7 @@ Run from the repository root:
 python3 tests/check_site.py
 ```
 
-The dependency-free checks cover all public HTML pages, not just the homepage. They validate document metadata, landmarks, skip navigation, unique IDs, internal file/anchor references, image alt text, external-link safety, reduced-motion and focus support, mobile navigation, responsive image markup, local icon assets, JSON-LD syntax, enquiry paths, and optional pricing without invented amounts. The checks are static and do not replace browser-based visual or accessibility testing.
+The dependency-free checks cover all public HTML pages, not just the homepage. They validate document metadata, landmarks, skip navigation, unique IDs, internal file/anchor references, image alt text, external-link safety, reduced-motion and focus support, mobile navigation, responsive image markup, explicit image dimensions, asynchronous decoding and below-the-fold lazy loading, local icon assets, JSON-LD syntax, enquiry paths, and optional pricing without invented amounts. The checks are static and do not replace browser-based visual or accessibility testing.
 
 Static checks are not a browser audit. Before launch:
 - Check 320px, 360px, 375px, 390px, 768px, 1024px and wide desktop widths.
