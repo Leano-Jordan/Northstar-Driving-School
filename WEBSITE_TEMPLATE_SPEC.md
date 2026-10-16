@@ -8,8 +8,8 @@ Understand the training options → scan listed packages → view demo contact i
 
 ## Visual direction
 - Editorial driving-school photography, a distinctive oversized display type scale and a confident, spacious layout.
-- Autumn palette: espresso `#38251D`, burnt terracotta `#B94F2D`, warm amber `#E8B85C`, warm cream `#FBF6EF`, sand `#F1E5D7` and ink `#2B2521`.
-- Warm neutrals support trust and readability; terracotta gives calls to action clear visual energy; amber is an accent, not the sole carrier of meaning.
+- Bright premium palette: confident cobalt `#2458D3`, deep navy `#152A4A`, sunshine yellow `#FFD166`, clean white `#FFFFFF`, soft sky blue `#EAF2FF`, cool ink `#17243A` and a small coral accent `#F06D4F`.
+- Cobalt reinforces clarity and dependability; sunshine yellow adds optimistic energy; white and sky-blue surfaces keep the experience open, fresh and readable. Coral is used sparingly for small moments of emphasis rather than competing with the primary call to action.
 - Responsive card depth, carefully staggered reveals, small hover transitions and a moving route motif provide personality without distracting from enquiries.
 - Google Fonts are loaded with system fallbacks and `display=swap`; the site must remain usable if the font request fails. No paid font or icon service is required.
 - No fabricated reviews, scores, badges or claims.
@@ -34,7 +34,7 @@ The homepage uses licensed illustrative stock photography. Replace it with buyer
 Address, service coverage, hours, transmission type, pick-up/drop-off, instructors, qualifications, accreditation, reviews, pass rates, guarantees or exact package inclusions.
 
 ## Demo acceptance checks
-- No plumbing copy, green/sage theme remnants or former-client identity/contact remnants.
+- No plumbing copy, legacy brown/green theme remnants or former-client identity/contact remnants.
 - All demo enquiry actions point to the demo contact section. No live phone or WhatsApp destinations are configured.
 - No package prices or internal budget figures are present in public pages, data files or documentation.
 - Navigation targets exist; supporting pages use matching visual tokens.
@@ -46,11 +46,11 @@ Address, service coverage, hours, transmission type, pick-up/drop-off, instructo
 Owner feedback, current details, approved imagery, final scope and budget must be agreed before production launch.
 
 
-## Visual system update — autumn road-trip palette
-- Primary: espresso brown `#38251D` for stable, professional structure.
-- Secondary: burnt terracotta `#B94F2D` for energetic emphasis and primary links.
-- Accent: warm amber `#E8B85C` for highlights and secondary CTA surfaces.
-- Canvas: warm cream `#FBF6EF`; supporting surface `#F1E5D7`.
-- Body text: `#2B2521`; muted text `#6F625A`; borders `#E7D9CB`.
-- Rationale: a restrained warm palette differentiates this template from common blue/green driving-school branding while retaining dark/light hierarchy. Avoid relying on hue alone; preserve strong text contrast and visible focus states.
+## Visual system update — bright premium road-trip palette
+- Primary: cobalt blue `#2458D3` for links and primary calls to action.
+- Structure: deep navy `#152A4A` for navigation and high-contrast sections.
+- Accent: sunshine yellow `#FFD166` for highlights, secondary CTA surfaces and route markers.
+- Canvas: clean white `#FFFFFF`; supporting surface: sky blue `#EAF2FF`.
+- Body text: `#17243A`; muted text: `#53627A`; borders: `#DCE6F3`; secondary accent: coral `#F06D4F`.
+- Rationale: blue signals clarity and dependability; yellow brings energy and friendliness. Use accents with restraint to keep the result premium rather than childish.
 - Accessibility target: WCAG AA text contrast (4.5:1 for ordinary text; 3:1 for large text).
