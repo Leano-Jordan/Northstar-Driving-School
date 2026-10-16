@@ -311,7 +311,7 @@ check("floating-demo-contact" in js and ".floating-demo-contact" in css,
       "Floating contact CTA naming is inconsistent between JavaScript and CSS")
 check('chat.dataset.event = "CONTACT_ENQUIRY_CLICK"' in js and "DEMO_CONTACT_CLICK" not in js,
       "Floating enquiry CTA should use the shared contact analytics event")
-check('element.closest("[data-event]")' in js,
+check('event.target.closest("[data-event]")' in js,
       "Contact analytics must use event delegation so configured links are tracked")
 check('window.fetch("data/business.json"' in js,
       "Contact routes must be loaded from the central business configuration")
