@@ -1,34 +1,38 @@
-# Thabz Driving School — Design DNA
+# Northstar Website Template — Design DNA
 
-Status: Prospect demo; designed to sell the direction, not pretend the full production website is finished.
+Status: fictional prospect demo for selling and adapting a reusable website; not a live driving school.
 
-Rosscore standards product quality, not visual sameness. This concept should feel like a practical South African driving school: human, locally familiar, confident and straightforward. It should not resemble car insurance, a dealership, a car marketplace or a template landing page.
+Rosscore product quality is more important than visual sameness. This concept should feel confident, human, clear and practical. The layout should sell the buyer on a thoughtful customer journey, not on fake business credentials or generic dashboard-like blocks.
 
 ## Audience and conversion
-- Primary audience: people comparing learner, driving licence, Code 8, Code 10, Code 14 and PDP options.
-- Main job: understand the next step, compare the listed price options, then reach Thabz with a useful question.
-- Primary conversions: WhatsApp enquiries and tap-to-call.
-- Keep contact obvious; show package prices instead of hiding them behind several clicks.
-- No fake booking widget, review score, pass rate, qualification or trust badge.
+- Default demonstration market: South Africa. The design can be localized for other jurisdictions after buyer verification.
+- The main job is to help a visitor identify a relevant training category and understand the next enquiry step.
+- The primary production conversion is the buyer's verified preferred channel: WhatsApp, phone, email, booking form or another approved destination.
+- Demo CTAs must not pretend to contact a real Northstar business; keep them routed to the demo enquiry area until a buyer configures real destinations.
+- No public price list, fake booking widget, review score, pass rate, qualification, accreditation or trust badge.
 
 ## Visual system
-- Restrained South African flag-inspired palette: deep green for structure, South African green for links/labels, gold for primary calls to action, and small red/blue/black accents in a thin top stripe.
-- Warm white and soft sage do most of the work. Do not paint every section a flag colour or use a full bright-orange contact block.
-- Strong editorial headline, readable body copy, natural photography, clear spacing, simple borders and small-radius cards.
-- The hero must show a real driving-learning context. The previous abstract road graphic was too generic and read like insurance branding.
-- Photo currently used is a CC0 PxHere placeholder: https://pxhere.com/en/photo/1708306. It is not a photo of Thabz's own learner or vehicle; replace it with approved brand photography when available.
-- Avoid fake South African location claims or another school's branded vehicles.
+- Palette: espresso `#38251D`, burnt terracotta `#B94F2D`, warm amber `#E8B85C`, warm cream `#FBF6EF`, sand `#F1E5D7`, and ink `#2B2521`.
+- Use warm neutral surfaces as the foundation, terracotta for emphasis, and amber sparingly for calls to action and visual markers.
+- Strong editorial display type, readable body copy, natural driving-learning imagery, comfortable spacing, small-radius cards and deliberate contrast.
+- Cosmetic motion is restrained: staged section reveals, card image movement, route motif animation, scroll progress and a continuous ticker. Respect reduced-motion preferences in both CSS and JavaScript.
+- Photographs are licensed illustrative stock, not evidence of the buyer's staff, cars, location, clients or results. Prefer buyer-approved imagery after permission is confirmed.
+- The header, navigation, CTA hierarchy and footer should feel consistent across the home, training, contact and 404 pages.
 
-## Research signals applied
-- [Centurion Driving School](https://www.centuriondrivingschool.co.za/) puts its categories, practical offer and contact methods in view.
-- [Centurion Driving School packages](https://www.centuriondrivingschool.co.za/packages/) makes package choice and prices directly scannable.
-- [Pretoria Driving School](https://www.pretoriadrivingschool.co.za/) exposes lesson options, price ranges and direct contact.
-- The demo adopts useful patterns—plain service categories, visible prices and low-friction contact—without copying another school's branding or adding unverified claims.
+## Local and international adaptation
+- South African Code 8/10/14, PDP and learner-licence terminology are examples for the default demo, not universal categories.
+- For each market update document language and locale, driving terminology and legal references, service area, country calling code, currency, contact destination, privacy/terms content and structured business data.
+- Do not invent local addresses, lesson coverage, prices, opening hours, transmission type, test support, instructor credentials, reviews, pass rates or guarantees.
+- Keep the demo banner until the buyer's actual identity, content, channels, legal copy and deployment have been reviewed.
 
-## Content boundaries
-- Prices and phone number come from the project material supplied; current status and package inclusions still need direct confirmation for production.
-- Phrase the site as an invitation to enquire, not a promise that a package includes a specific service.
-- Never imply a guaranteed pass or publish fabricated testimonials, ratings, instructor credentials, coverage or opening hours.
+## Engineering priorities
+1. Trust and accurate business claims.
+2. Clear contact conversion path.
+3. Mobile-first layout, low-data operation and responsive images.
+4. Keyboard access, visible focus, semantic markup and WCAG AA text contrast.
+5. Reduced motion, no blocking navigation and stable layout.
+6. SEO metadata and structured data grounded in buyer-confirmed facts.
+7. Automated quality checks, deployment verification and post-commit reporting.
 
-## Scope
-This is a homepage-led sales demo with lightweight supporting pages. Do not build booking, payments or a backend before the owner chooses the direction, confirms details and agrees to scope.
+## Release gate
+A commit is not a release. Run the dependency-free tests, confirm the GitHub Actions result, inspect the deployed URL, and test representative mobile/desktop viewports and keyboard interaction. Report browser and device checks honestly; do not claim visual QA that was not performed.
