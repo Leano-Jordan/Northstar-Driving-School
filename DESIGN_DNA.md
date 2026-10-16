@@ -1,38 +1,44 @@
 # Northstar Website Template — Design DNA
 
-Status: fictional prospect demo for selling and adapting a reusable website; not a live driving school.
+Status: fictional prospect demo for a reusable driving-school website; not a live driving school.
 
-Rosscore product quality is more important than visual sameness. This concept should feel confident, human, clear and practical. The layout should sell the buyer on a thoughtful customer journey, not on fake business credentials or generic dashboard-like blocks.
+The template should feel confident, human, bright and practical, with an image-led editorial layout rather than generic dashboard-like blocks.
 
 ## Audience and conversion
-- Default demonstration market: South Africa. The design can be localized for other jurisdictions after buyer verification.
-- The main job is to help a visitor identify a relevant training category and understand the next enquiry step.
-- The primary production conversion is the buyer's verified preferred channel: WhatsApp, phone, email, booking form or another approved destination.
-- Demo CTAs must not pretend to contact a real Northstar business; keep them routed to the demo enquiry area until a buyer configures real destinations.
-- No public price list, fake booking widget, review score, pass rate, qualification, accreditation or trust badge.
+- Build for independent instructors, local driving schools and larger training providers. South Africa is an example locale; the structure must also adapt for global markets.
+- Help visitors identify a relevant training route and reach one clear enquiry or booking action.
+- Treat pricing as a configuration choice: publish verified lesson rates and packages when useful, use quote-first for genuinely tailored work, or mix both.
+- Demo CTAs must not pretend to contact a real Northstar business. Keep buyer-owned phone, WhatsApp, email and booking channels unconfigured until approved.
+- Never invent prices, testimonials, pass rates, qualifications, accreditation, addresses, coverage, opening hours or guarantees.
 
 ## Visual system
-- Palette: cobalt `#2458D3`, deep navy `#152A4A`, sunshine `#FFD166`, clean white `#FFFFFF`, sky blue `#EAF2FF`, ink `#17243A`, and coral `#C83B2A`.
-- Use clean white and sky-blue surfaces as the foundation, cobalt for navigation and primary actions, sunshine for optimistic highlights, and coral sparingly for secondary emphasis.
-- Strong editorial display type, readable body copy, natural driving-learning imagery, comfortable spacing, small-radius cards and deliberate contrast.
-- Cosmetic motion is restrained: staged section reveals, card image movement, route motif animation, scroll progress and a continuous ticker. Respect reduced-motion preferences in both CSS and JavaScript.
-- Photographs are licensed illustrative stock, not evidence of the buyer's staff, cars, location, clients or results. Prefer buyer-approved imagery after permission is confirmed.
-- The header, navigation, CTA hierarchy and footer should feel consistent across the home, training, contact and 404 pages.
+- Palette: cobalt #2458D3, deep navy #152A4A, sunshine #FFD166, white #FFFFFF, sky blue #EAF2FF, ink #17243A and restrained coral #C83B2A.
+- Use white and sky-blue surfaces as the foundation, cobalt for navigation and actions, and sunshine for optimistic highlights.
+- Use relevant photography throughout: lesson moments, learner support, cars on roads, test preparation and professional vehicles where appropriate.
+- Apply a subtle road photograph under a strong colour overlay for visual texture without sacrificing readable contrast.
+- Give images deliberate crops, aspect ratios, meaningful alt text, and responsive/lazy-loading behaviour. Prefer buyer-approved photography in production; stock is illustrative, never evidence of the buyer’s staff or fleet.
+- Bundle open-source outline SVG icons locally; no paid icon pack or external icon CDN.
+- Motion stays restrained and respects prefers-reduced-motion.
 
-## Local and international adaptation
-- South African Code 8/10/14, PDP and learner-licence terminology are examples for the default demo, not universal categories.
-- For each market update document language and locale, driving terminology and legal references, service area, country calling code, currency, contact destination, privacy/terms content and structured business data.
-- Do not invent local addresses, lesson coverage, prices, opening hours, transmission type, test support, instructor credentials, reviews, pass rates or guarantees.
-- Keep the demo banner until the buyer's actual identity, content, channels, legal copy and deployment have been reviewed.
+## Pricing and terminology
+- The fictional demo starts in quote mode because it has no approved prices. The template supports published rates, quote-first or mixed pricing.
+- For consumer lessons, show price, lesson duration, package inclusions, cancellation terms and separate testing/application fees when known and approved.
+- Lead with portable terms: learner licence/permit, theory support, practical driving lessons, test preparation, refresher lessons and specialist training.
+- South African terms such as learner’s licence, Code 8/10/14 and PDP/PrDP are market-specific examples—not universal categories or legal advice.
+
+## Localization
+- Confirm each market’s language/locale, licence categories and eligibility terms, service area, currency, country code, preferred contact channel, privacy/terms requirements and structured business data.
+- Confirm available services, transmission type, pick-up/drop-off, testing support, business hours, instructor credentials, inclusions and prices before publishing.
+- Keep header, navigation, CTA hierarchy and footer consistent across home, training, contact and 404 pages.
+- Do not use a prominent full-width demo warning banner. Keep fictional-demo status discreet in the footer and contact-preview limitations clear.
 
 ## Engineering priorities
-1. Trust and accurate business claims.
-2. Clear contact conversion path.
-3. Mobile-first layout, low-data operation and responsive images.
-4. Keyboard access, visible focus, semantic markup and WCAG AA text contrast.
-5. Reduced motion, no blocking navigation and stable layout.
-6. SEO metadata and structured data grounded in buyer-confirmed facts.
-7. Automated quality checks, deployment verification and post-commit reporting.
+1. Trust, accurate business claims and clear conversion.
+2. Image-rich design with responsive crops and efficient loading.
+3. Mobile accessibility, focus visibility and reduced-motion support.
+4. Owner-controlled public pricing configuration.
+5. Search metadata based on verified facts.
+6. Automated static checks, deployment verification and honest reporting.
 
 ## Release gate
-A commit is not a release. Run the dependency-free tests, confirm the GitHub Actions result, inspect the deployed URL, and test representative mobile/desktop viewports and keyboard interaction. Report browser and device checks honestly; do not claim visual QA that was not performed.
+Run python3 tests/check_site.py, confirm GitHub Actions succeeds, inspect the deployed URL and test representative mobile/desktop viewports and keyboard interactions. Do not claim visual QA or live deployment until verified.
