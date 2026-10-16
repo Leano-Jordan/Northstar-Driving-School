@@ -67,7 +67,7 @@
 
         const email = String(business.email || "").trim();
         if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          enabledCount += Number(enableChannel("[data-contact-email]", "mailto:" + encodeURIComponent(email), "Email the school · " + email + " ↗"));
+          enabledCount += Number(enableChannel("[data-contact-email]", "mailto:" + email, "Email the school · " + email + " ↗"));
         }
 
         const heading = document.querySelector("[data-contact-heading]");
