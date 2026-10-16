@@ -216,7 +216,7 @@ for page, audit in audits.items():
 price_pattern = re.compile(r"\bR\s?\d[\d, ]*(?:\.\d{2})?\b", re.I)
 for page, audit in audits.items():
     visible_text = " ".join(audit.visible_text)
-    check(page != "index.html" or "Example rates are shown to demonstrate the finished layout" in visible_text,
+    check(page != "index.html" or "Illustrative example rates only" in visible_text,
           f"{page}: public sample prices need a clear example-rate disclosure")
 check("Pexels" in sources.get("README.md", ""),
       "README.md: photography source and licence guidance should remain documented")
