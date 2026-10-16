@@ -1,4 +1,4 @@
-name: Thabz Site Quality
+name: Northstar Static Site Quality
 
 on:
   push:
