@@ -213,11 +213,11 @@ readme = sources.get("README.md", "")
 agents = sources.get("AGENTS.md", "").lower()
 gates = sources.get("docs/QUALITY-GATES.md", "")
 
-check("wa.me/" in index and "data-event=" in index,
-      "Homepage missing WhatsApp conversion links/events")
+check(("wa.me/" in index or "contact.html#demo-enquiry" in index) and "data-event=" in index,
+      "Homepage missing demo contact conversion links/events")
 check("data-current-year" in index and "new Date().getFullYear()" in js,
       "Footer copyright year is not updated automatically")
-check("tel:" in index, "Homepage missing telephone conversion link")
+check("tel:" in index or "contact.html#demo-enquiry" in index, "Homepage missing contact conversion link")
 check("prefers-reduced-motion" in css, "Reduced-motion fallback missing")
 check("#d8f66a" not in css.lower() and "#d8f66a" not in sources.get("favicon.svg", "").lower(),
       "Legacy neon-lime accent remains outside the harmonised sage palette")
