@@ -18,6 +18,27 @@ def check(condition, message):
         errors.append(message)
 
 
+def color_luminance(hex_color):
+    """Return WCAG relative luminance for a six-digit sRGB colour."""
+    if not re.fullmatch(r"#[0-9a-fA-F]{6}", hex_color or ""):
+        raise ValueError(f"Expected a six-digit hex colour, got: {hex_color!r}")
+    channels = [int(hex_color[index:index + 2], 16) / 255 for index in (1, 3, 5)]
+    linear = [
+        channel / 12.92 if channel <= 0.04045 else ((channel + 0.055) / 1.055) ** 2.4
+        for channel in channels
+    ]
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2]
+
+
+def contrast_ratio(foreground, background):
+    """Compute the WCAG contrast ratio between two opaque sRGB colours."""
+    first, second = sorted(
+        (color_luminance(foreground), color_luminance(background)),
+        reverse=True,
+    )
+    return (first + 0.05) / (second + 0.05)
+
+
 class PageAudit(HTMLParser):
     """Collect relevant markup without external test dependencies."""
 
@@ -234,6 +255,38 @@ check("--navy:" in css and "--cobalt:" in css and "--sunshine:" in css,
       "Semantic cobalt and sunshine colour tokens are missing")
 check(not any(color in css.lower() for color in ("#38251d", "#241812", "#b94f2d", "#e8b85c", "#fbf6ef", "#f1e5d7")),
       "Legacy autumn/brown colours remain in the bright premium theme")
+
+# Measure text and CTA colour pairs from the actual root design tokens.
+def root_color(token):
+    match = re.search(rf"(?m)^\s*{re.escape(token)}\s*:\s*(#[0-9a-fA-F]{6})\s*;", css)
+    return match.group(1) if match else None
+
+
+palette = {
+    token: root_color(token)
+    for token in (
+        "--navy", "--navy-deep", "--cobalt", "--sunshine",
+        "--paper", "--paper-2", "--white", "--ink", "--muted",
+        "--coral",
+    )
+}
+for token, value in palette.items():
+    check(value is not None, f"Missing valid six-digit colour token: {token}")
+
+if all(palette.values()):
+    contrast_pairs = (
+        ("body text on white/cream canvas", palette["--ink"], palette["--paper"]),
+        ("muted text on white/cream canvas", palette["--muted"], palette["--paper"]),
+        ("cobalt link/CTA on white", palette["--cobalt"], palette["--white"]),
+        ("cobalt link on sky-blue surface", palette["--cobalt"], palette["--paper-2"]),
+        ("navy text on sunshine CTA", palette["--navy-deep"], palette["--sunshine"]),
+        ("coral accent on white", palette["--coral"], palette["--white"]),
+        ("coral accent on sky-blue surface", palette["--coral"], palette["--paper-2"]),
+    )
+    for label, foreground, background in contrast_pairs:
+        check(contrast_ratio(foreground, background) >= 4.5,
+              f"WCAG AA normal-text contrast failed for {label}: "
+              f"{contrast_ratio(foreground, background):.2f}:1")
 check("aria-expanded" in js and "aria-expanded" in index,
       "Mobile navigation is missing an accessible expanded state")
 check("has-mobile-menu" in js and ".site-header:not(.has-mobile-menu) nav" in css,
