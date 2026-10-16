@@ -8,7 +8,7 @@ Understand the training options → scan listed packages → view demo contact i
 
 ## Visual direction
 - Editorial driving-school photography, a distinctive oversized display type scale and a confident, spacious layout.
-- Bright premium palette: confident cobalt `#2458D3`, deep navy `#152A4A`, sunshine yellow `#FFD166`, clean white `#FFFFFF`, soft sky blue `#EAF2FF`, cool ink `#17243A` and a small coral accent `#F06D4F`.
+- Bright premium palette: confident cobalt `#2458D3`, deep navy `#152A4A`, sunshine yellow `#FFD166`, clean white `#FFFFFF`, soft sky blue `#EAF2FF`, cool ink `#17243A` and a small coral accent `#C83B2A`.
 - Cobalt reinforces clarity and dependability; sunshine yellow adds optimistic energy; white and sky-blue surfaces keep the experience open, fresh and readable. Coral is used sparingly for small moments of emphasis rather than competing with the primary call to action.
 - Responsive card depth, carefully staggered reveals, small hover transitions and a moving route motif provide personality without distracting from enquiries.
 - Google Fonts are loaded with system fallbacks and `display=swap`; the site must remain usable if the font request fails. No paid font or icon service is required.
@@ -51,6 +51,6 @@ Owner feedback, current details, approved imagery, final scope and budget must b
 - Structure: deep navy `#152A4A` for navigation and high-contrast sections.
 - Accent: sunshine yellow `#FFD166` for highlights, secondary CTA surfaces and route markers.
 - Canvas: clean white `#FFFFFF`; supporting surface: sky blue `#EAF2FF`.
-- Body text: `#17243A`; muted text: `#53627A`; borders: `#DCE6F3`; secondary accent: coral `#F06D4F`.
+- Body text: `#17243A`; muted text: `#53627A`; borders: `#DCE6F3`; secondary accent: coral `#C83B2A`.
 - Rationale: blue signals clarity and dependability; yellow brings energy and friendliness. Use accents with restraint to keep the result premium rather than childish.
 - Accessibility target: WCAG AA text contrast (4.5:1 for ordinary text; 3:1 for large text).
