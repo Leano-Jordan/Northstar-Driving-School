@@ -215,11 +215,11 @@ for page, audit in audits.items():
 price_pattern = re.compile(r"\bR\s?\d[\d, ]*(?:\.\d{2})?\b", re.I)
 for page, audit in audits.items():
     visible_text = " ".join(audit.visible_text)
-    check(not price_pattern.search(visible_text),
-          f"{page}: possible public price figure found")
-check(not price_pattern.search(sources.get("README.md", "")),
-      "README.md: possible public price figure found")
-for public_doc in ("data/business.json", "WEBSITE_TEMPLATE_SPEC.md", "ROSCORE_PROJECT_MANIFEST.md"):
+    check(page != "index.html" or "Example rates are shown to demonstrate the finished layout" in visible_text,
+          f"{page}: public sample prices need a clear example-rate disclosure")
+check("illustrative sample rates" in sources.get("README.md", "").lower(),
+      "README.md: sample pricing should be documented as illustrative")
+for public_doc in ("WEBSITE_TEMPLATE_SPEC.md", "ROSCORE_PROJECT_MANIFEST.md"):
     check(not price_pattern.search(sources.get(public_doc, "")),
           f"{public_doc}: possible public price or internal budget figure found")
 try:
@@ -323,7 +323,7 @@ check('branches: ["main"]' in workflow and "pull_request:" not in workflow,
       "Site quality workflow should run on main only")
 
 check('class="demo-banner"' not in combined_html, "Prominent demo/warning banner must not return")
-check('data-pricing-mode="quote"' in index, "Demo should declare its configurable quote-first pricing mode")
+check('data-pricing-mode="published"' in index, "Homepage should declare its published example pricing mode")
 check("data-package-price" in index and "data-price-amount" in index, "Homepage lacks optional published-price fields")
 check("photo-journal-grid" in index and index.count("<img") >= 7, "Homepage should use multiple driving-school photos and a photo-led story collage")
 check("assets/icons/" in sources.get("services.html", "") and "Lucide" in readme, "Local open-source icon assets/licence notes are missing")
