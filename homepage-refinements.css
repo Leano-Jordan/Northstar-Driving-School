@@ -1,0 +1,27 @@
+/* Homepage polish: a soft, authentic lesson photograph behind the hero creates depth without reducing legibility. */
+.home-page .hero {
+  width: 100%;
+  max-width: none;
+  padding-left: max(28px, calc((100% - 1320px) / 2));
+  padding-right: max(28px, calc((100% - 1320px) / 2));
+  background: #f7faff;
+  isolation: isolate;
+}
+.home-page .hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(247,250,255,.98), rgba(247,250,255,.89) 48%, rgba(247,250,255,.78)), url("https://images.pexels.com/photos/9518018/pexels-photo-9518018.jpeg?auto=compress&cs=tinysrgb&w=1800") center 48% / cover no-repeat;
+  pointer-events: none;
+}
+.home-page .hero-copy { padding-top: clamp(18px, 3vw, 42px); padding-bottom: clamp(18px, 3vw, 42px); }
+.home-page .hero-photo-frame { border-radius: 150px 8px 8px 8px; outline: 1px solid rgba(255,255,255,.9); outline-offset: 7px; }
+.home-page .hero-note { display: inline-flex; padding: 9px 13px; border: 1px solid rgba(36,88,211,.14); border-radius: 3px; background: rgba(255,255,255,.84); }
+.home-page .training-card .card-photo { overflow: hidden; }
+.home-page .training-card .card-photo img { object-fit: cover; object-position: center; }
+@media (max-width: 760px) {
+  .home-page .hero { width: 100%; padding: 42px 18px 66px; gap: 34px; }
+  .home-page .hero::after { background: linear-gradient(180deg, rgba(247,250,255,.97), rgba(247,250,255,.86)), url("https://images.pexels.com/photos/9518018/pexels-photo-9518018.jpeg?auto=compress&cs=tinysrgb&w=1000") center / cover no-repeat; }
+  .home-page .hero-photo-frame { border-radius: 100px 7px 7px 7px; }
+}
