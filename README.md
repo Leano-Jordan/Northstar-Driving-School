@@ -1,28 +1,29 @@
-# Thabz Driving School — commercial website
+# Northstar Driving Academy — reusable website template
 
-A mobile-first static website for Thabz Driving School, designed around a distinctive editorial identity, clear training pathways and direct WhatsApp enquiries.
+A mobile-first static website for Northstar Driving Academy, designed around a distinctive editorial identity, clear training pathways and direct WhatsApp enquiries.
 
 ## Customer journey
 - Start with a clear brand statement and an illustrative driving lesson photo.
 - Explore the approach and the learner, driving licence, Code 8/10, Code 14, PDP and lesson options.
-- Message or call Thabz to confirm availability, current package inclusions and an accurate quote.
+- Message or call Northstar to confirm availability, current package inclusions and an accurate quote.
 - No package prices are published on the website.
 
-## Business details
-- Phone / WhatsApp: 071 575 2579
-- WhatsApp international format: +27 71 575 2579
-- The supplied price-list details are intentionally not reproduced in this public-facing README or website copy. The owner should confirm any current quote and package inclusions directly with prospective customers.
+## Demo identity
+- Fictional demo brand: Northstar Driving Academy.
+- No real customer contact details are included.
+- Contact actions route to the demo contact section and must be connected to the buyer's verified phone/WhatsApp details before launch.
+- Replace the demo brand, service area, contact channels and business claims for each buyer.
 
 ## Hero photography
 - The temporary illustrative hero image is by Ron Lach on Pexels: https://www.pexels.com/photo/man-in-white-and-black-striped-dress-shirt-driving-car-9518029/
-- Pexels lists the image as free to use. It depicts a Black adult sitting beside a young learner during a practice drive; it is not a photograph of Thabz or a verified member of the business.
+- Pexels lists the image as free to use. It depicts a Black adult sitting beside a young learner during a practice drive; it is not a photograph of Northstar or a verified member of the business.
 - Replace this stock image with owner-approved photography before claiming it shows the actual instructor or vehicle.
 
 ## Training-card photography
 - Learner's licence card: Ron Lach, Pexels — https://www.pexels.com/photo/boy-in-gray-sweater-driving-car-9518016/ (free under the Pexels License).
 - Driving licence card: Magda Ehlers, Pexels — https://www.pexels.com/photo/a-car-driving-on-the-road-3886669/ (Chapman's Peak Drive, Cape Town; free under the Pexels License).
 - PDP / progress card: Gugulethu Ndlalani, Pexels — https://www.pexels.com/photo/black-men-and-freight-rusty-transport-4612683/ (Pimville, Gauteng; free under the Pexels License).
-- Pexels permits commercial website use without required attribution: https://www.pexels.com/license/. The stock photos are illustrative, not endorsements or photographs of Thabz's own clients, staff or vehicles.
+- Pexels permits commercial website use without required attribution: https://www.pexels.com/license/. The stock photos are illustrative, not endorsements or photographs of Northstar's own clients, staff or vehicles.
 
 ## Site experience
 - Pages: `index.html`, `services.html`, `contact.html`, and `404.html`.
@@ -49,6 +50,6 @@ GitHub Pages workflow: `.github/workflows/deploy-pages.yml`.
 
 
 ## Contact links and social profiles
-- Verified public contact channels in the project: phone and WhatsApp, both using 071 575 2579.
+- Verified public contact channels in the project: phone and WhatsApp, both using Demo contact details.
 - No confirmed public email address or official Facebook, Instagram, TikTok or other social-profile URL was available in the supplied project records during this update. The site therefore links directly to the verified phone and WhatsApp channels rather than inventing handles or sending visitors to unrelated profiles.
 - The footer's WhatsApp mark uses the Simple Icons SVG under CC0; the telephone icon is an inline SVG based on Lucide's open-source icon style. No icon CDN or paid icon pack is required.
