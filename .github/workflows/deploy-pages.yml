@@ -1,4 +1,4 @@
-name: Deploy Thabz Demo to GitHub Pages
+name: Deploy Northstar Demo to GitHub Pages
 
 on:
   push:
