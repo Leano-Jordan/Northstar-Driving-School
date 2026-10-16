@@ -4,7 +4,7 @@
   "phone": "",
   "phoneTel": "",
   "whatsappUrl": "",
-  "marketContext": "South Africa is the default demo market; the buyer must confirm its exact service area and jurisdiction.",
+  "marketContext": "South Africa is an example locale, not a universal assumption. Confirm each buyer’s jurisdiction and service area.",
   "priceDisclosure": "Demo template contains no published prices. Populate only with buyer-approved details.",
   "claimsRequiringVerification": [
     "current prices and package inclusions",
@@ -15,7 +15,9 @@
     "instructor qualifications and registration",
     "test-booking support",
     "reviews, pass rates and guarantees",
-    "current application and testing-centre fees"
+    "current application and testing-centre fees",
+    "currency and jurisdiction-specific licence terminology",
+    "test-day or test-vehicle support"
   ],
   "localizationChecklist": [
     "language and locale metadata",
@@ -23,6 +25,19 @@
     "service area, country code, currency and preferred enquiry channel",
     "privacy notice, terms and locally appropriate legal disclosures",
     "structured business data that matches verified buyer details",
-    "buyer-owned photography and confirmed claims"
-  ]
+    "buyer-owned photography and confirmed claims",
+    "published-price, quote-first or mixed pricing model"
+  ],
+  "pricing": {
+    "mode": "quote",
+    "supportedModes": [
+      "published",
+      "quote",
+      "mixed"
+    ],
+    "rule": "Use buyer-approved public amounts only. In published mode, enter an actual amount in the matching data-price-amount field in index.html; empty values remain hidden.",
+    "consumerGuidance": "Make lesson duration, rates, package inclusions, cancellation terms and separate testing/application fees easy to compare.",
+    "quoteGuidance": "Use for genuinely tailored, specialist or experience-dependent training; do not hide fixed prices just because quote-first was the first client's preference."
+  },
+  "servicesAreConfigurable": true
 }
