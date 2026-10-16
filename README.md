@@ -11,7 +11,7 @@ A mobile-first static website template for driving schools, demonstrated with th
 ## Demo identity
 - Fictional demo brand: Northstar Driving Academy.
 - No real customer contact details are included.
-- Contact actions route to the demo contact section and must be connected to the buyer's verified phone/WhatsApp details before launch.
+- Contact actions route to the demo contact section and must be connected to the buyer's verified enquiry channels before launch.
 - Replace the demo brand, service area, contact channels and business claims for each buyer.
 
 ## Hero photography
@@ -59,4 +59,4 @@ GitHub Pages workflow: `.github/workflows/deploy-pages.yml`.
 
 ## Contact links and social profiles
 - The demo intentionally contains no phone, WhatsApp, email or social-profile destination. Connect buyer-owned channels only after purchase and written confirmation.
-- The footer's WhatsApp mark uses the Simple Icons SVG under CC0; the telephone icon is an inline SVG based on Lucide's open-source icon style. No icon CDN or paid icon pack is required.
+- The footer uses a neutral inline message icon and an inline telephone-style contact icon; no icon CDN or paid icon pack is required.
