@@ -4,7 +4,7 @@
 A strong homepage-led prospect demo that helps the owner react to a clear design, messaging and enquiry experience before a full project scope is agreed.
 
 ## Visitor journey
-Understand the training options → scan listed packages → contact Northstar directly by WhatsApp or phone.
+Understand the training options → scan listed packages → view demo contact information.
 
 ## Visual direction
 - Driving-school photography and a natural editorial layout instead of abstract roads, car-sale imagery or insurance-style blocks.
@@ -26,14 +26,14 @@ Understand the training options → scan listed packages → contact Northstar d
 - Current prices, inclusions and fee details are discussed privately with the owner and are not stored in this public repository.
 
 ## Image policy
-The homepage uses the repository-local `assets/thabz-driving-lesson.svg`, depicting Black South African learner and instructor characters. Prefer owner-approved photos from Northstar's own public social profiles when the exact business account and image usage rights can be verified. Avoid unrelated stock photos that misrepresent the business.
+The homepage uses licensed illustrative stock photography. Replace it with buyer-approved photography where available, and never imply stock imagery depicts the buyer's real instructor, learners or fleet.
 
 ## Do not fabricate
 Address, service coverage, hours, transmission type, pick-up/drop-off, instructors, qualifications, accreditation, reviews, pass rates, guarantees or exact package inclusions.
 
 ## Demo acceptance checks
 - No plumbing copy or visual remnants.
-- All WhatsApp actions target +27 71 575 2579; phone links use tel:0000000000.
+- All demo enquiry actions point to the demo contact section. No live phone or WhatsApp destinations are configured.
 - No package prices or internal budget figures are present in public pages, data files or documentation.
 - Navigation targets exist; supporting pages use matching visual tokens.
 - Readable on narrow mobile screens and wide desktop screens.
