@@ -9,9 +9,9 @@ A bright, premium, photo-led static website template for independent instructors
 - Move to the buyer's verified phone, WhatsApp, email or booking channel after configuration.
 
 ## Pricing configuration
-- The homepage currently displays clearly disclosed illustrative rates in data-pricing-mode="published" mode so buyers can judge the finished pricing layout. These are not approved school prices.
-- Before launch, replace sample amounts with buyer-approved rates and confirm lesson duration, package inclusions, cancellations and separate fees; or switch to data-pricing-mode="quote" to hide the example prices. The script also supports mixed pricing.
-- An amount stays hidden when quote mode is active or the matching data-price-amount field is empty.
+- The homepage uses data-pricing-mode="mixed" to show clearly disclosed illustrative rates alongside a tailored-quote option. These are not approved school prices.
+- Before launch, replace sample amounts with buyer-approved rates and confirm lesson duration, package inclusions, cancellations and separate fees. Modes are published (fixed-rate rows), quote (quote-only rows), and mixed (both); each package declares its own display mode.
+- A pricing row is hidden when its mode is excluded or its data-price-amount value is empty.
 - Remove any package category the buyer does not offer. Public rates should identify lesson duration, package inclusions, cancellation conditions and separate fees.
 - Never store confidential internal budgets or private notes in this public repository.
 
