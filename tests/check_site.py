@@ -349,7 +349,7 @@ check('branches: ["main"]' in workflow and "pull_request:" not in workflow,
       "Site quality workflow should run on main only")
 
 check('class="demo-banner"' not in combined_html, "Prominent demo/warning banner must not return")
-check('data-pricing-mode="published"' in index, "Homepage should declare its published example pricing mode")
+check('data-pricing-mode="mixed"' in index, "Homepage should show sample rates and tailored-quote option in mixed pricing mode")
 check("data-package-price" in index and "data-price-amount" in index, "Homepage lacks optional published-price fields")
 check('data-price-mode="published"' in index and 'data-price-mode="quote"' in index,
       "Pricing cards must declare their published-rate or quote-first display mode")
