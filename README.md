@@ -1,6 +1,6 @@
 # Northstar Driving Academy — reusable website template
 
-A mobile-first static website template for driving schools, demonstrated with the fictional Northstar Driving Academy identity. It pairs an editorial autumn visual system with clear training pathways and a conversion-focused demo enquiry journey.
+A mobile-first static website template for driving schools, demonstrated with the fictional Northstar Driving Academy identity. It pairs a bright premium cobalt-and-sunshine visual system with clear training pathways and a conversion-focused demo enquiry journey.
 
 ## Customer journey
 - Start with a clear brand statement and an illustrative driving lesson photo.
