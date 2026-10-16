@@ -23,6 +23,69 @@
   document.querySelectorAll("[data-current-year]").forEach((element) => {
     element.textContent = String(new Date().getFullYear());
   });
+
+  // Only expose phone, WhatsApp or email channels that the business owner has actually configured.
+  const contactStatus = document.querySelector("[data-contact-status]");
+  if (contactStatus && typeof window.fetch === "function") {
+    window.fetch("data/business.json", { credentials: "same-origin" })
+      .then((response) => {
+        if (!response.ok) throw new Error("Contact configuration could not be loaded.");
+        return response.json();
+      })
+      .then((business) => {
+        const enableChannel = (selector, href, label, external = false) => {
+          const link = document.querySelector(selector);
+          if (!link || !href) return false;
+          link.href = href;
+          link.textContent = label;
+          link.dataset.event = "CONTACT_ENQUIRY_CLICK";
+          if (external) {
+            link.target = "_blank";
+            link.rel = "noopener noreferrer";
+          }
+          link.hidden = false;
+          return true;
+        };
+
+        let enabledCount = 0;
+        const phone = String(business.phone || "").trim();
+        const dialString = String(business.phoneTel || "").replace(/[^+\d]/g, "");
+        if (phone && /^\+[1-9]\d{6,14}$/.test(dialString)) {
+          enabledCount += Number(enableChannel("[data-contact-phone]", "tel:" + dialString, "Call the school · " + phone + " ↗"));
+        }
+
+        let whatsappHref = "";
+        try {
+          const candidate = new URL(String(business.whatsappUrl || ""));
+          const isWaMe = candidate.protocol === "https:" && candidate.hostname === "wa.me" && /^\/[1-9]\d{6,14}$/.test(candidate.pathname);
+          const isApiWhatsApp = candidate.protocol === "https:" && candidate.hostname === "api.whatsapp.com" && candidate.pathname === "/send" && /^\d{7,15}$/.test(candidate.searchParams.get("phone") || "");
+          if (isWaMe || isApiWhatsApp) whatsappHref = candidate.href;
+        } catch (_error) {
+          // An empty or invalid destination remains disabled rather than becoming a broken link.
+        }
+        enabledCount += Number(enableChannel("[data-contact-whatsapp]", whatsappHref, "Message on WhatsApp ↗", true));
+
+        const email = String(business.email || "").trim();
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          enabledCount += Number(enableChannel("[data-contact-email]", "mailto:" + encodeURIComponent(email), "Email the school · " + email + " ↗"));
+        }
+
+        const heading = document.querySelector("[data-contact-heading]");
+        const rule = document.querySelector("[data-contact-rule]");
+        if (heading) heading.hidden = enabledCount === 0;
+        if (rule) rule.hidden = enabledCount === 0;
+        contactStatus.hidden = enabledCount > 0;
+        if (enabledCount > 0) {
+          contactStatus.textContent = "Ask about lesson options, package inclusions, availability and next steps before booking.";
+        } else {
+          contactStatus.textContent = "This example has no confirmed contact channel yet. Add the school's approved phone, WhatsApp or email details in data/business.json before publishing.";
+        }
+      })
+      .catch(() => {
+        contactStatus.hidden = false;
+        contactStatus.textContent = "Contact options could not be loaded. Confirm the school's approved contact details before publishing.";
+      });
+  }
   const header = document.querySelector(".site-header, body > header");
   const nav = header && header.querySelector("nav");
   const menuToggle = header && header.querySelector(".menu-toggle");
@@ -99,7 +162,7 @@
   chatArrow.textContent = "↗";
   chatArrow.setAttribute("aria-hidden", "true");
   chat.append(chatDot, chatText, chatArrow);
-  chat.dataset.event = "DEMO_CONTACT_CLICK";
+  chat.dataset.event = "CONTACT_ENQUIRY_CLICK";
   document.body.appendChild(chat);
 
   // Avoid covering the page's main enquiry action or footer links.
@@ -120,13 +183,16 @@
     }
   }
 
-  document.querySelectorAll("[data-event]").forEach((element) => {
-    element.addEventListener("click", () => {
-      const eventName = element.dataset.event;
-      if (typeof window.gtag === "function") window.gtag("event", eventName);
-      if (typeof window.plausible === "function") window.plausible(eventName);
-      window.dispatchEvent(new CustomEvent("roscore:event", { detail: { name: eventName, href: element.href || null } }));
-    });
+  // Delegation also captures links enabled later from the contact configuration.
+  document.addEventListener("click", (event) => {
+    const element = event.target && typeof event.target.closest === "function"
+      ? event.target.closest("[data-event]")
+      : null;
+    if (!element) return;
+    const eventName = element.dataset.event;
+    if (typeof window.gtag === "function") window.gtag("event", eventName);
+    if (typeof window.plausible === "function") window.plausible(eventName);
+    window.dispatchEvent(new CustomEvent("roscore:event", { detail: { name: eventName, href: element.href || null } }));
   });
 
   if (!reducedMotion && "IntersectionObserver" in window) {
