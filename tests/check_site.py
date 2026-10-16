@@ -325,7 +325,7 @@ check('branches: ["main"]' in workflow and "pull_request:" not in workflow,
 check('class="demo-banner"' not in combined_html, "Prominent demo/warning banner must not return")
 check('data-pricing-mode="quote"' in index, "Demo should declare its configurable quote-first pricing mode")
 check("data-package-price" in index and "data-price-amount" in index, "Homepage lacks optional published-price fields")
-check("photo-journal-grid" in index and len(re.findall(r"<img\\b", index, re.I)) >= 7, "Homepage should use multiple driving-school photos and a photo-led story collage")
+check("photo-journal-grid" in index and index.count("<img") >= 7, "Homepage should use multiple driving-school photos and a photo-led story collage")
 check("assets/icons/" in sources.get("services.html", "") and "Lucide" in readme, "Local open-source icon assets/licence notes are missing")
 check("images.pexels.com/photos/3042415" in css, "Subtle relevant road-photo background is missing")
 print("Northstar reusable-template multi-page static quality checks")
