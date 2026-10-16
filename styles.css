@@ -11,7 +11,7 @@
   --ink: #17243A;
   --muted: #53627A;
   --line: #DCE6F3;
-  --coral: #F06D4F;
+  --coral: #C83B2A;
   --font-body: "DM Sans", Arial, sans-serif;
   --font-display: "Space Grotesk", "DM Sans", sans-serif;
   font-synthesis: none;
@@ -103,8 +103,8 @@ p { margin-top: 0; }
 .photo-caption strong { font: 600 1.18rem/1.2 var(--font-display); letter-spacing: -.03em; }
 .photo-caption small { margin-top: 4px; color: #ffffffc7; font-size: .77rem; }
 .hero-orbit { position: absolute; pointer-events: none; border: 1px solid #152a4a; border-radius: 50%; }
-.orbit-one { z-index: 0; width: 120px; height: 120px; left: -39px; bottom: 64px; border-color: #f06d4f; }
-.orbit-two { z-index: 0; width: 165px; height: 165px; left: -61px; bottom: 42px; border-color: #f06d4f7a; }
+.orbit-one { z-index: 0; width: 120px; height: 120px; left: -39px; bottom: 64px; border-color: #C83B2A; }
+.orbit-two { z-index: 0; width: 165px; height: 165px; left: -61px; bottom: 42px; border-color: #C83B2A7a; }
 .image-credit { position: absolute; bottom: 0; right: 0; color: #8B7A6D; font-size: .62rem; }
 .image-credit a { color: #67564B; text-underline-offset: 3px; }
 .scroll-cue { position: absolute; bottom: 19px; left: 0; display: inline-flex; align-items: center; gap: 11px; color: #71819b; font-size: .6rem; font-weight: 800; letter-spacing: .14em; text-decoration: none; }
@@ -631,7 +631,7 @@ main[tabindex="-1"]:focus-visible { outline: 3px solid var(--coral); outline-off
   --shadow-soft: 0 12px 34px #152a4a10;
   --shadow-lift: 0 24px 54px #152a4a19;
   --ease-out: cubic-bezier(.16, 1, .3, 1);
-  --focus-ring: 0 0 0 4px #f06d4f30;
+  --focus-ring: 0 0 0 4px #C83B2A30;
 }
 body {
   background: radial-gradient(ellipse at 88% 7%, #ffd1660B 0, transparent 27rem), var(--paper);
@@ -649,7 +649,7 @@ body {
 .hero::before {
   position: absolute; z-index: -1; content: ""; pointer-events: none;
   width: min(70vw, 780px); height: min(72vw, 760px); top: -8%; right: -15%; border-radius: 50%;
-  background: radial-gradient(circle at 58% 40%, #ffd16623 0, transparent 53%), radial-gradient(circle at 65% 66%, #f06d4f0C 0, transparent 61%);
+  background: radial-gradient(circle at 58% 40%, #ffd16623 0, transparent 53%), radial-gradient(circle at 65% 66%, #C83B2A0C 0, transparent 61%);
 }
 .hero-visual { z-index: 1; }
 .hero-photo-frame { box-shadow: 0 32px 70px #152a4a20, 0 2px 0 #ffffff inset; transition: box-shadow .45s var(--ease-out), border-radius .45s var(--ease-out); }
